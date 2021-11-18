@@ -228,6 +228,7 @@ body{
 }
 .solution-block{
 	overflow: hidden;
+	margin-top: -3%;
 	.container{
 		@include flexbox();
 		
