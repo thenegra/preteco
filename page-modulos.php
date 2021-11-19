@@ -1,3 +1,4 @@
+<?php /* Template Name: Página de módulos */ ?>
 
 <?php get_header(); ?>
 <main id="content" role="main">

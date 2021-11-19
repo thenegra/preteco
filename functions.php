@@ -1,4 +1,8 @@
+
 <?php
+@ini_set( 'upload_max_size' , '120M' );
+@ini_set( 'post_max_size', '120M');
+@ini_set( 'max_execution_time', '300' );
 add_action( 'after_setup_theme', 'blankslate_setup' );
 function blankslate_setup() {
 load_theme_textdomain( 'blankslate', get_template_directory() . '/languages' );
@@ -26,9 +30,14 @@ add_user_meta( $user_id, 'blankslate_notice_dismissed_3', 'true', true );
 add_action( 'wp_enqueue_scripts', 'blankslate_enqueue' );
 function blankslate_enqueue() {
 wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
-wp_enqueue_style( 'css', get_template_directory_uri().'/css/styles.css' );
+
 wp_enqueue_style( 'ico', get_template_directory_uri().'/css/icons.css' );
-wp_enqueue_script( 'jquery' );
+wp_enqueue_script( 'jquer','https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
+wp_enqueue_script( 'slick','http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' );
+wp_enqueue_style('slick','http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+	    wp_register_style( 'Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+wp_enqueue_style('Font_Awesome');
+wp_enqueue_style( 'css', get_template_directory_uri().'/css/styles.css' );
 }
 add_action( 'wp_footer', 'blankslate_footer' );
 function blankslate_footer() {
@@ -144,4 +153,123 @@ return count( $comments_by_type['comment'] );
 } else {
 return $count;
 }
+}
+
+
+add_action('get_header', 'my_filter_head');
+
+  function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+  }
+
+
+
+add_action('acf/init', 'my_acf_init');
+function my_acf_init() {
+	
+	// check function exists
+	if( function_exists('acf_register_block') ) {
+		
+		// register a testimonial block
+		acf_register_block(array(
+			'name'				=> 'mod-clientes',
+			'title'				=> __('Preteco: Módulo de clientes'),
+			'description'		=> __('Bloque de clientes'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'clientes' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-productos',
+			'title'				=> __('Preteco: Módulo de productos'),
+			'description'		=> __('Bloque de productos/soluciones'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'productos' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-hero',
+			'title'				=> __('Preteco: Hero de la home'),
+			'description'		=> __('Bloque principal de la home'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'hero' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-numeros',
+			'title'				=> __('Preteco: En números'),
+			'description'		=> __('Preteco en números'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'hero' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-texto',
+			'title'				=> __('Preteco: Bloque texto'),
+			'description'		=> __('Bloque con título y texto común'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'texto' ),
+		));
+	}
+}
+
+function render_block_acf( $block ) {
+	
+	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+	
+	// include a template part from within the "template-parts/block" folder
+	if( file_exists( get_theme_file_path("/template-parts/block/content-{$slug}.php") ) ) {
+		include( get_theme_file_path("/template-parts/block/content-{$slug}.php") );
+	}
+}
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyz-_';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+
+
+
+
+function the_field_nop( $field_name ) {
+	
+	remove_filter('acf_the_content', 'wpautop');
+	
+	the_field( $field_name );
+	
+	add_filter('acf_the_content', 'wpautop');
+	
+}
+
+/**
+ * Get ID of the first ACF block on the page
+ */
+function blockBump(){
+	if($id = firstBlock()):?>
+	<div class="space"></div>
+	<?php endif;
+}
+function firstBlock() {
+    $post = get_post(); 
+
+    if(has_blocks($post->post_content)) {
+        $blocks = parse_blocks($post->post_content);
+        $first_block_attrs = $blocks[0]['attrs'];
+
+        if(array_key_exists('id', $first_block_attrs)) {
+            return $first_block_attrs['id'];
+        }
+    }
 }
