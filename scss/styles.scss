@@ -278,6 +278,7 @@ body{
 				display: block;
 				li{
 					display: inline-block;
+
 					a{
 						display: block;
 						padding: .5rem;
@@ -297,6 +298,15 @@ body{
 			
 						}
 						&:hover{
+							&:after{
+								left: .5rem;
+								right: .5rem;
+							}
+						}
+					}
+					&.current-menu-item{
+						a{
+							pointer-events: none;
 							&:after{
 								left: .5rem;
 								right: .5rem;
