@@ -884,7 +884,11 @@ body{
 				color: #f00;
 			}
 			width: 48%;
+			@media all and (max-width: 480px){
+				width: 100%;
+			}
 			margin-bottom: 2rem;
+
 			input,textarea{
 				width: 100%;
 				display: block;
