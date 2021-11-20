@@ -14,7 +14,7 @@
 		<div class="brand">
 			<div class="main">
 			<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
-			<nav class="social-media">
+			<nav class="social-media only-desk">
 				<ul>
 					<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -36,6 +36,11 @@
 					<p class="small">CABA, Argentina</p>
 				</li>
 				<li class="hq">
+					<p class="small"><strong>Uruguay</strong></p>
+					<p class="small">Los Patos 2590, Piso 4</p>
+					<p class="small">CABA, Argentina</p>
+				</li>
+				<li class="hq">
 					<p class="small"><strong>La Paz</strong></p>
 					<p class="small">Calle 15 de Calacoto Nº 8089</p>
 					<p class="small">Torre Fergal piso 2 Oficina E.</p>
@@ -44,17 +49,21 @@
 				<li class="hq">
 					<p class="small"><strong>Santa Cruz</strong></p>
 					<p class="small">Equipetrol Norte y 4º anillo</p>
-					<p class="small">Calle K Nº 279, Edificil Hotel, Camino Real</p>
+					<p class="small">Calle K Nº 279, Edificil Hotel</p>
 					<p class="small">Santa Cruz, Bolivia</p>
 				</li>
 				
-				<li class="hq">
-					<p class="small"><strong>Uruguay</strong></p>
-					<p class="small">Los Patos 2590, Piso 4</p>
-					<p class="small">CABA, Argentina</p>
-				</li>
+				
 			</ul>
 		</div>
+		<nav class="social-media only-mob">
+				<ul>
+					<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				</ul>
+			</nav>
 	</div>
 </footer>
 </div>

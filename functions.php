@@ -256,8 +256,11 @@ function the_field_nop( $field_name ) {
 /**
  * Get ID of the first ACF block on the page
  */
-function blockBump(){
-	if($id = firstBlock()):?>
+function blockBump($block){
+
+	$id = $block['id'];
+	
+	if($id == firstBlock()):?>
 	<div class="space"></div>
 	<?php endif;
 }
