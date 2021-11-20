@@ -772,18 +772,30 @@ body{
 		@media all and (min-width: 769px){
 		@include flexbox();
 		@include justify-content(space-between);
-		@include align-items(flex-end);
+		@include align-items(flex-start);
+		}
+		.contact-info{
+			@media all and (min-width: 769px){
+				
+				max-width: 60%;
+			}
 		}
 		.hqs{
 			@media all and (min-width: 769px){
 				@include flexbox();
+				@include flex-wrap(wrap);
+				max-width: 80%;
 			}
+
 			.hq{
 				margin-top: 1rem;
 				@media all and (min-width: 769px){
 					margin: 0;
 					margin-left: 1rem;
+					width: 45%;
+					margin-bottom: 2rem;
 				}
+
 				p{
 					&:first-child{
 						margin-bottom: .5em;
@@ -807,6 +819,9 @@ body{
 					
 					@include flexbox();
 					@include align-items(stretch);
+					@media all and (min-width: 769px){
+						max-width: 14rem;
+					}
 					img{
 						display: block;
 						margin: 2em 0;
@@ -815,7 +830,8 @@ body{
 							margin: 0;
 							margin-top: .25rem;
 							margin-left: 2rem;
-							height: 5rem;
+							height: auto;
+							width: 100%;
 						}
 					}
 
