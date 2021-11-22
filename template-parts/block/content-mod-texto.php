@@ -9,6 +9,9 @@
 			<div>
 				<?php echo get_field('texto');?>
 			</div>
+			<?php if(get_field('boton')['url']):?>
+				<a class="boton" href="<?php echo get_field('boton')['url'];?>"><?php echo get_field('boton')['texto'];?></a>
+			<?php endif;?>
 		</article>
 	</div>
 </section>

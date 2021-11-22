@@ -68,5 +68,36 @@
 </footer>
 </div>
 <?php wp_footer(); ?>
+<div class="toggle-container" id="toggle-relevamiento">
+	<div class="toggle-inner">
+		<div class="inner-container bg-blanco">
+			<a onclick="closeCotizacion()" class="close-btn "><i class="fa fa-close"></i></a>
+			<?php echo do_shortcode('[contact-form-7 id="179" title="Relevamiento"]');?>
+		</div>
+	</div>
+</div>
+<div class="toggle-container" id="toggle-cv">
+	<div class="toggle-inner">
+		<div class="inner-container bg-blanco">
+			<a onclick="closeCV()" class="close-btn "><i class="fa fa-close"></i></a>
+			<?php echo do_shortcode('[contact-form-7 id="194" title="Recruiting"]');?>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function getCotizacion(str){
+		$('.change-area').val(str);
+		$('#toggle-relevamiento').fadeIn();
+	}
+	function closeCotizacion(){
+		$('#toggle-relevamiento').fadeOut();	
+	}
+	function getCV(){
+		$('#toggle-cv').fadeIn();
+	}
+	function closeCotizacion(){
+		$('#toggle-cv').fadeOut();	
+	}
+</script>
 </body>
 </html>
