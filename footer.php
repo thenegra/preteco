@@ -80,7 +80,7 @@
 	<div class="toggle-inner">
 		<div class="inner-container bg-blanco">
 			<a onclick="closeCV()" class="close-btn "><i class="fa fa-close"></i></a>
-			<?php echo do_shortcode('[contact-form-7 id="194" title="Recruiting"]');?>
+			<?php echo do_shortcode('[contact-form-7 id="180" title="Recruiting"]');?>
 		</div>
 	</div>
 </div>
