@@ -181,6 +181,7 @@ body{
 	font-size: .9em;
 	@include animar(all,.6s);
 	cursor: pointer;
+	color: $c_negro;
 	&:hover{
 		//@include background(linear-gradient(90deg, $c_verde 50%, $c_gris 80%));
 		background-position: 100% 50%;
