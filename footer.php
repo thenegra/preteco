@@ -95,7 +95,7 @@
 	function getCV(){
 		$('#toggle-cv').fadeIn();
 	}
-	function closeCotizacion(){
+	function closeCV(){
 		$('#toggle-cv').fadeOut();	
 	}
 </script>
