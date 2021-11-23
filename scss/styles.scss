@@ -856,6 +856,11 @@ body{
 					width: 1.3em;
 					@include border-radius(.3em);
 					text-align: center;
+					@include animar();
+					
+					&:hover{
+						background: $c_negro;
+					}
 				}
 			}
 		}
