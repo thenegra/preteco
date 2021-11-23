@@ -857,9 +857,10 @@ body{
 					@include border-radius(.3em);
 					text-align: center;
 					@include animar();
-					
+
 					&:hover{
 						background: $c_negro;
+						color: $c_blanco;
 					}
 				}
 			}
