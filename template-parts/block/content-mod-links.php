@@ -16,9 +16,9 @@
 				?>
 			<article class="link">
 				<div class="foto">
-					<?php echo wp_get_attachment_image($link['foto']['ID'],'medium'); ?>
+					<a href="<?php echo get_field('boton')['url'];?>"><?php echo wp_get_attachment_image($link['foto']['ID'],'medium'); ?></a>
 				</div>
-				<h4 class="tit-three"><?php echo $link['nombre'];?></h4>
+				<h4 class="tit-three"><a href="<?php echo get_field('boton')['url'];?>"><?php echo $link['nombre'];?></a></h4>
 				<div class="texto">
 					<?php echo $link['bajada'];?>
 				</div>
