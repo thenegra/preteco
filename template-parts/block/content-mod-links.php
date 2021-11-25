@@ -8,23 +8,24 @@
 			<div>
 				<?php echo get_field('texto');?>
 			</div>
-			<section class="links">
-				<?php foreach(get_field('links') as $link):
-					//var_dump($link);
-					?>
-				<article class="link">
-					<div class="foto">
-						<?php echo wp_get_attachment_image($link['foto']['ID']); ?>
-					</div>
-					<h4 class="tit-three"><?php echo $link['nombre'];?></h4>
-					<div class="texto">
-						<?php echo $link['bajada'];?>
-					</div>
-					<a class="boton" href="<?php echo get_field('boton')['url'];?>">Ver más</a>
-				</article>
-				<?php endforeach;?>
-			</section>
+			
 		</article>
+		<section class="links">
+			<?php foreach(get_field('links') as $link):
+				//var_dump($link);
+				?>
+			<article class="link">
+				<div class="foto">
+					<?php echo wp_get_attachment_image($link['foto']['ID'],'medium'); ?>
+				</div>
+				<h4 class="tit-three"><?php echo $link['nombre'];?></h4>
+				<div class="texto">
+					<?php echo $link['bajada'];?>
+				</div>
+				<a class="boton" href="<?php echo get_field('boton')['url'];?>">Ver más</a>
+			</article>
+			<?php endforeach;?>
+		</section>
 	</div>
 </section>
 <div class="container">
