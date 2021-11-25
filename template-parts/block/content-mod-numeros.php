@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<article class="text-container">
-			<h3 class="tit-two no-marg">Quienes somos en <strong>números</strong></h3>
+			<h3 class="tit-two no-marg">Quienes <strong>somos</strong></h3>
 			<div>
 				<p>Somos una consultora integral de IT que hace mas de dos décadas trabajamos junto a nuestros clientes para optimizar sus procesos de negocios a través de la implementación de soluciones informáticas, innovando o modernizando su infraestructura tecnológica.</p>
 				<p>Nuestra trayectoria y experiencia en aportar una solución completa y satisfactoria para cada una de las necesidades de nuestros canales y clientes, nos convierte en un aliado estratégico para sus negocios.</p>
