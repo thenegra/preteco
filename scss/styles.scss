@@ -1116,6 +1116,8 @@ body{
 		.link{
 			width: 48%;
 			margin-right: 2%;
+			border-bottom: none!important;
+			padding-bottom: 0!important;
 			&:nth-child(2n){
 				margin-right: 0;
 			}
@@ -1123,9 +1125,20 @@ body{
 	}
 	.link{
 		margin-bottom: 3em;
-
+		padding-bottom: 1.5em;
+		border-bottom: 1px solid $c_verde;
+		@media all and (max-width: 768px){
+			margin-bottom: 1.5em;
+		}
 		h4{
 			margin-bottom: .5em;
+			a{
+				text-decoration: none;
+				@include animar();
+				&:hover{
+					color: $c_verde;
+				}
+			}
 		}
 		.foto{
 			display: block;
