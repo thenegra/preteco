@@ -5,6 +5,10 @@
 	<div class="container">
 		<article class="text-container">
 			<h3 class="tit-two no-marg">Quienes somos en <strong>números</strong></h3>
+			<div>
+				<p>Somos una consultora integral de IT que hace mas de dos décadas trabajamos junto a nuestros clientes para optimizar sus procesos de negocios a través de la implementación de soluciones informáticas, innovando o modernizando su infraestructura tecnológica.</p>
+				<p>Nuestra trayectoria y experiencia en aportar una solución completa y satisfactoria para cada una de las necesidades de nuestros canales y clientes, nos convierte en un aliado estratégico para sus negocios.</p>
+			</div>
 		</article>
 		
 	</div>
@@ -34,21 +38,22 @@
 			<div class="linea-gradient small inv only-mob"></div>
 			<div class="inner-content">
 				<div class="inner-half right">
-					<h4 class="tit-three"><span class="t-verde">+</span> 300 clientes en el sector privado</h4>
+					<h4 class="tit-three"><span class="t-verde">+</span>500 clientes en el sector privado</h4>
 					<p>Servicios financieros / Salud / Telco & Media / Manufactura / Retail</p>
+					<p><span class="t-verde">+</span> 30 Organismos Nacionales <span class="t-verde">+</span> 50 Organismos Provinciales <span class="t-verde">+</span> 150 Organismos Municipales</p>
 				</div>
 				<div class="linea-gradient small inv"></div>
 			</div>
-			<div class="inner-content">
+			<!--div class="inner-content">
 				<div class="inner-half right">
 					<h4 class="tit-three"><span class="t-verde">+</span> 200 clientes en el sector público</h4>
 					<p><span class="t-verde">+</span> 30 Organismos Nacionales <br /><span class="t-verde">+</span> 50 Organismos Provinciales <br /><span class="t-verde">+</span> 150 Organismos Municipales</p>
 				</div>
 				<div class="linea-gradient small inv"></div>
-			</div>
+			</div-->
 			<div class="inner-content">
 				<div class="inner-half right">
-					<h4 class="tit-three">Nuestros <strong>partnerships</strong></h4>
+					<h4 class="tit-three">Nuestras <strong>alianzas</strong></h4>
 					<div class="logos">
 						<img  src="<?php echo get_template_directory_uri()?>/img/sas-partner.png" alt="SAS Partner">
 						<img class="google" 	src="<?php echo get_template_directory_uri()?>/img/google-partner.png" alt="Google Partner">

@@ -17,7 +17,7 @@
 
 						<article class="">
 							<div class="inner-half right">
-							<h4 class="tit-three">Liderando el sector tecnológico con más de 420 mil clientes e implementaciones en 145 países.</h4>
+							<h4 class="tit-three">Innovando y modernizando negocios desde hace mas de dos décadas.</h4>
 							</div>
 						</article>
 						<div class="img-container">
