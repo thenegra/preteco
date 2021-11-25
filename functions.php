@@ -216,6 +216,24 @@ function my_acf_init() {
 			'icon'				=> 'grid-view',
 			'keywords'			=> array( 'texto' ),
 		));
+		acf_register_block(array(
+			'name'				=> 'mod-slider',
+			'title'				=> __('Preteco: Slider hero'),
+			'description'		=> __('Bloque con slider hero'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'slider, hero' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-links',
+			'title'				=> __('Preteco: Bloque links'),
+			'description'		=> __('Bloque con slider hero'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'slider, hero' ),
+		));
 	}
 }
 
