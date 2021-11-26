@@ -38,7 +38,7 @@
 			<div class="linea-gradient small inv only-mob"></div>
 			<div class="inner-content">
 				<div class="inner-half right">
-					<h4 class="tit-three"><span class="t-verde">+</span>500 clientes en el sector privado</h4>
+					<h4 class="tit-three"><span class="t-verde">+</span>500 clientes en el sector privado y público</h4>
 					<p>Servicios financieros / Salud / Telco & Media / Manufactura / Retail</p>
 					<p><span class="t-verde">+</span> 30 Organismos Nacionales <span class="t-verde">+</span> 50 Organismos Provinciales <span class="t-verde">+</span> 150 Organismos Municipales</p>
 				</div>
