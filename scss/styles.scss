@@ -202,8 +202,8 @@ body{
 }
 .linea-gradient{
 	display: block;
-	height: 3px;
-	
+	height: 2px;
+
 	@include background-image(linear-gradient(90deg, $c_verde 50%, $c_gris 80%));
 	&.small{
 		height: 1px;
