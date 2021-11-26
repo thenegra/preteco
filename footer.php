@@ -67,6 +67,7 @@
 	</div>
 </footer>
 <div class="linea-gradient"></div>
+
 </div>
 <?php wp_footer(); ?>
 <div class="toggle-container" id="toggle-relevamiento">
