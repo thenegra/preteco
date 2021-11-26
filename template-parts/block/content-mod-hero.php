@@ -29,5 +29,5 @@
 		</div>
 	</div>
 </section>
-<div class="linea-gradient"></div>
+<div class="linea-gradient small"></div>
 <div class="container">
