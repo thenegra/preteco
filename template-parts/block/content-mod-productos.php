@@ -4,7 +4,7 @@ $id = $block['id'];
 
 ?>
 </div>
-<section class="text-block bg-negro">
+<section class="text-block bg-gris">
 	<?php blockBump($block); ?>
 	<div class="container">
 		<article class="text-container">
