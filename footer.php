@@ -84,6 +84,7 @@
 		</div>
 	</div>
 </div>
+<div class="linea-gradient"></div>
 <script type="text/javascript">
 	function getCotizacion(str){
 		$('.change-area').val(str);
