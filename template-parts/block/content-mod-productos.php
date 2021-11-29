@@ -1,10 +1,13 @@
 <!-- Bloque de soluciones -->
 <?php 
 $id = $block['id'];
-
+$bg = 'bg-gris';
+if(get_field('color_fondo')){
+	$bg = 'bg-'.get_field('color_fondo');
+}
 ?>
 </div>
-<section class="text-block bg-gris">
+<section class="text-block <?php echo $bg?>">
 	<?php blockBump($block); ?>
 	<div class="container">
 		<article class="text-container">
@@ -19,7 +22,7 @@ $id = $block['id'];
 		
 	</div>
 </section>
-<section class="solution-block bg-gris">
+<section class="solution-block <?php echo $bg?>">
 
 	<div class="container">
 		<?php
@@ -27,7 +30,7 @@ $id = $block['id'];
 		 if(get_field('productos')):foreach(get_field('productos') as $producto):
 			?>
 			<article class="solution-item">
-			<div class="card-top bg-gris">
+			<div class="card-top">
 				<span class="icono ptc-<?php echo $producto['icono']?>"></span>
 				<div class="contents">
 					<div>

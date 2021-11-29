@@ -38,6 +38,14 @@
 			<div class="linea-gradient small inv only-mob"></div>
 			<div class="inner-content">
 				<div class="inner-half right">
+					<h4 class="tit-three">Quienes somos</h4>
+					<p>Somos una consultora integral de IT que hace mas de dos décadas trabajamos junto a nuestros clientes para optimizar sus procesos de negocios a través de la implementación de soluciones informáticas, innovando o modernizando su infraestructura tecnológica.</p>
+					<p>Nuestra trayectoria y experiencia en aportar una solución completa y satisfactoria para cada una de las necesidades de nuestros canales y clientes, nos convierte en un aliado estratégico para sus negocios.</p>
+				</div>
+				<div class="linea-gradient small inv"></div>
+			</div>
+			<div class="inner-content">
+				<div class="inner-half right">
 					<h4 class="tit-three"><span class="t-verde">+</span>500 clientes en el sector privado y público</h4>
 					<p>Servicios financieros / Salud / Telco & Media / Manufactura / Retail</p>
 					<p><span class="t-verde">+</span> 30 Organismos Nacionales <span class="t-verde">+</span> 50 Organismos Provinciales <span class="t-verde">+</span> 150 Organismos Municipales</p>
@@ -51,7 +59,7 @@
 				</div>
 				<div class="linea-gradient small inv"></div>
 			</div-->
-			<div class="inner-content">
+			<!--div class="inner-content">
 				<div class="inner-half right">
 					<h4 class="tit-three">Nuestras <strong>alianzas</strong></h4>
 					<div class="logos">
@@ -62,7 +70,7 @@
 					</div>
 				</div>
 				
-			</div>
+			</div-->
 		</article>
 	</div>
 </section>

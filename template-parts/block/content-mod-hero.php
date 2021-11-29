@@ -11,20 +11,21 @@
 			</div>
 		</div>
 		<div class="col-dos bg-verde">
-			
+				<div class="inner-half right">
 				<ul class="slider-main">
 					<li class="slider-unit">
 
 						<article class="">
-							<div class="inner-half right">
-							<h4 class="tit-three">Innovando y modernizando negocios desde hace mas de dos décadas.</h4>
-							</div>
+							
+							<h4 class="tit-four">Más de 20 años potenciando diariamente la innovación de nuestros clientes. Gestionamos los datos punta a punta, desde la obtención hasta la activación del proyecto, para convertirlos en negocios concretos y escalables.</h4>
+							
 						</article>
 						<div class="img-container">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg" alt="Image placeholder">
 						</div>
 					</li>
 				</ul>
+				</div>
 			</div>
 		</div>
 	</div>

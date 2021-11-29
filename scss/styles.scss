@@ -460,7 +460,11 @@ body{
 			padding-top: 8rem;*/
 		}
 		.col-dos{
-			
+			.inner-half{
+				@media all and (min-width: 769px){
+					height: 100%;
+				}
+			}
 			.slider-main{
 				height: 100%;
 				.slider-unit{
@@ -474,7 +478,8 @@ body{
 						background: $c_verde;	
 					}
 					.img-container{
-						height: 20%;
+						max-height: 40vh;
+						width: 50vw;
 						@include flex-grow(2);
 					}
 					img{
@@ -486,7 +491,7 @@ body{
 					}
 					
 					h4{
-						max-width: 13em;
+						//max-width: 13em;
 					}
 				}
 
