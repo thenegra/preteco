@@ -2,6 +2,7 @@
 <?php 
 $id = $block['id'];
 $bg = 'bg-gris';
+var_dump(get_field('color_fondo'));
 if(get_field('color_fondo')){
 	$bg = 'bg-'.get_field('color_fondo');
 }
