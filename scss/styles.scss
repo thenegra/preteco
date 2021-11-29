@@ -405,6 +405,7 @@ body{
 /* Block: Main hero */
 .main-hero{
 	display: block;
+	overflow: hidden;
 	.container{
 		@include flexbox();
 		@include flex-direction(column);

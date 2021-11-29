@@ -42,7 +42,7 @@ if(get_field('color_fondo')){
 				<a href="<?php echo $producto['link']; ?>" class="boton">Ver más</a>
 
 			<?php endif;?>
-			<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')" class="boton">Relevamiento gratuito</a>
+			<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')" class="boton">Quiero saber más</a>
 			</nav>
 				</div>
 				
