@@ -1,6 +1,6 @@
 <!-- Bloque de números -->
 </div>
-<section class="text-block bg-negro">
+<!--section class="text-block bg-negro">
 
 	<div class="container">
 		<article class="text-container">
@@ -12,7 +12,7 @@
 		</article>
 		
 	</div>
-</section>
+</section-->
 <section class="numeros-block bg-negro">
 	<div class="linea-gradient small inv "></div>
 	<div class="contenedor-numeros">
