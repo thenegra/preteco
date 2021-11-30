@@ -976,25 +976,33 @@ body{
 			}
 		}
 		.hqs{
-			@media all and (min-width: 769px){
+			
+			@media all and (min-width: 481px){
 				@include flexbox();
 				@include flex-wrap(wrap);
 				width: 100%;
 			}
-
 			.hq{
 				margin-top: 1rem;
+				@media all and (min-width: 481px){
+					width: 45%;
+					margin-right: 5%;
+				}
 				@media all and (min-width: 769px){
 					margin: 0;
 					//margin-left: 1rem;
-					width: 45%;
-					margin-right: 5%;
+					width: 30%;
+					margin-right: 3%;
 					margin-bottom: 1rem;
-					&:nth-child(n+3){
+					@media all and (max-width: 960px){
+						width: 45%;
+						margin-right: 5%;
+					}
+					&:nth-child(n+5){
 						margin-bottom: 0;
 					}
 				}
-
+				
 				p{
 					&:first-child{
 						margin-bottom: .5em;

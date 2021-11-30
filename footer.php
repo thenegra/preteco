@@ -31,29 +31,38 @@
 		<div class="contact-info">
 			<ul class="hqs">
 				<li class="hq">
-					<p class="small"><strong>Buenos Aires</strong></p>
+					<p class="small"><strong>Argentina</strong></p>
 					<p class="small">Los Patos 2590, Piso 4</p>
 					<p class="small">CABA, Argentina</p>
 				</li>
 				<li class="hq">
-					<p class="small"><strong>Uruguay</strong></p>
-					<p class="small">Los Patos 2590, Piso 4</p>
-					<p class="small">CABA, Argentina</p>
+					<p class="small"><strong>Argentina</strong></p>
+					<p class="small"> Av. Hipolito Yrigoyen 146 Piso 15</p>
+					<p class="small">Córdoba, Argentina</p>
 				</li>
+				
 				<li class="hq">
-					<p class="small"><strong>La Paz</strong></p>
+					<p class="small"><strong>Bolivia</strong></p>
 					<p class="small">Calle 15 de Calacoto Nº 8089</p>
 					<p class="small">Torre Fergal piso 2 Oficina E.</p>
 					<p class="small">La Paz, Bolivia</p>
 				</li>
 				<li class="hq">
-					<p class="small"><strong>Santa Cruz</strong></p>
+					<p class="small"><strong>Bolivia</strong></p>
 					<p class="small">Equipetrol Norte y 4º anillo</p>
 					<p class="small">Calle K Nº 279, Edificil Hotel</p>
 					<p class="small">Santa Cruz, Bolivia</p>
 				</li>
-				
-				
+				<li class="hq">
+					<p class="small"><strong>Colombia</strong></p>
+					<p class="small">Calle 72 número 9-55 oficina 502</p>
+					<p class="small">Bogota, Colombia</p>
+				</li>
+				<li class="hq">
+					<p class="small"><strong>Uruguay</strong></p>
+					<p class="small">Uruguay Rincon 602 piso 6</p>
+					<p class="small">Montevideo, Uruguay</p>
+				</li>
 			</ul>
 		</div>
 		<nav class="social-media only-mob">
