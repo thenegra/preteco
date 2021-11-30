@@ -1129,6 +1129,7 @@ body{
 	}
 }
 .links{
+	margin-top: 2em;
 	@media all and (min-width: 769px){
 		@include flexbox();
 		@include flex-wrap(wrap);
