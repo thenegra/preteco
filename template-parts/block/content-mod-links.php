@@ -16,13 +16,13 @@
 				?>
 			<article class="link">
 				<div class="foto">
-					<a href="<?php echo get_field('boton')['url'];?>"><?php echo wp_get_attachment_image($link['foto']['ID'],'medium'); ?></a>
+					<a href="<?php echo $link['url'];?>"><?php echo wp_get_attachment_image($link['foto']['ID'],'medium'); ?></a>
 				</div>
-				<h4 class="tit-three"><a href="<?php echo get_field('boton')['url'];?>"><?php echo $link['nombre'];?></a></h4>
+				<h4 class="tit-three"><a href="<?php echo $link['url'];?>"><?php echo $link['nombre'];?></a></h4>
 				<div class="texto">
 					<?php echo $link['bajada'];?>
 				</div>
-				<a class="boton" href="<?php echo get_field('boton')['url'];?>">Ver más</a>
+				<a class="boton" href="<?php echo $link['url'];?>">Ver más</a>
 			</article>
 			<?php endforeach;?>
 		</section>
