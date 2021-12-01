@@ -922,7 +922,7 @@ body{
 	}
 	.social-media{
 		margin-top: 1rem;
-		@media all and (max-width: 768px){
+		@media all and (max-width: 960px){
 			margin-top: 2rem;
 			margin-bottom: .5rem;
 		}
@@ -951,7 +951,7 @@ body{
 		}
 		&.test{
 			ul{
-				@media all and (min-width: 769px){
+				@media all and (min-width: 961px){
 					@include flex-direction(column);
 					@include justify-content(flex-start);
 					height: 100%;
@@ -964,15 +964,16 @@ body{
 	}
 	.container{
 		margin: auto;
-		@media all and (min-width: 769px){
+		@media all and (min-width: 961px){
 		@include flexbox();
 		@include justify-content(space-between);
 		@include align-items(stretch);
 		}
 		.contact-info{
-			@media all and (min-width: 769px){
+			@media all and (min-width: 961px){
 				
 				max-width: 60%;
+				width: 100%;
 			}
 		}
 		.hqs{
@@ -984,37 +985,49 @@ body{
 			}
 			.hq{
 				margin-top: 1rem;
-				@media all and (min-width: 481px){
-					width: 45%;
-					margin-right: 5%;
+				width: 30%;
+				margin-right: 3%;
+				.oficina{
+					display: block;
+					margin-top: 1em;
+					p{
+						
+					}
 				}
-				@media all and (min-width: 769px){
+				@media all and (min-width: 961px){
 					margin: 0;
 					//margin-left: 1rem;
 					width: 30%;
 					margin-right: 3%;
 					margin-bottom: 1rem;
-					@media all and (max-width: 960px){
-						width: 45%;
-						margin-right: 5%;
-					}
-					&:nth-child(n+5){
-						margin-bottom: 0;
-					}
+					
 				}
-				
+				@media all and (max-width: 600px){
+					
+				}
+				@media all and (max-width: 600px){
+					width: 100%;
+					margin-right: 0;
+				}
+				&:nth-child(n+5){
+					margin-bottom: 0;
+				}
 				p{
-					&:first-child{
+					&.pais{
 						margin-bottom: .5em;
 					}
 				}
 			}
 		}
 		.brand{
+
 			@media all and (min-width: 769px){
 				@include flexbox();
 				@include align-items(stretch);
 				.main{
+					@media all and (max-width: 960px){
+					width: 33%;
+					}
 					@include flexbox();
 					@include flex-direction(column);
 					//@include justify-content(space-between);
@@ -1048,6 +1061,11 @@ body{
 							margin-left: 2rem;
 							height: auto;
 							width: 100%;
+							@media all and (max-width: 960px){
+								margin-left: 0;
+								margin-bottom: 2em;
+							}
+
 						}
 					}
 
@@ -1066,10 +1084,18 @@ body{
 				margin: 0;
 			}
 			h3{
-				width: 30%;
+				width: 40%;
 			}	
 			.wpcf7{
-				width: 70%;
+				width: 60%;
+			}
+			@media all and (max-width: 960px){
+				h3{
+					width: 33%;
+				}
+				.wpcf7{
+					width: 66%;
+				}
 			}
 		}
 		
