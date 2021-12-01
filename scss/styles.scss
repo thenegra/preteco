@@ -678,6 +678,7 @@ body{
 			
 			@media all and (max-width: 768px){
 				padding: 3rem 5%;
+				padding-bottom: 3.5rem;
     			
 			}
 			.inner-half{
@@ -730,7 +731,8 @@ body{
 			}
 			.inner-content{
 				.inner-half{
-					padding: 3rem 5%;	
+					padding: 3rem 5%;
+					padding-bottom: 3.5rem;
 					@media all and (min-width: 769px){
 						padding: 3rem 4rem;	
 					}
