@@ -39,12 +39,42 @@ gtag('config', 'UA-82775308-5');
 			<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
 		</div>
 	</div>
-	<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
-	</nav>
+	<div class="only-desk">
+		<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+		</nav>
+	</div>
+	<div class="only-mob">
+		<a onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+	</div>
 </div>
+<script type="text/javascript">
+	function toggleMenu(){
+		$('.mob-menu').fadeToggle();
+	}
+</script>
 <div class="linea-gradient small fill"></div>
 </header>
+<div class="mob-menu bg-verde">
+	<div class="inner-menu">
+		
+		<div class="container">
+			<a class="close" onclick="toggleMenu()"><i class="fa fa-close"></i></a>
+			<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
+			<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+			</nav>
+			<nav class="social-media only-mob">
+				<ul>
+					<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
 <?php if(is_front_page()):?>
 <script type="text/javascript">
 	var sT;

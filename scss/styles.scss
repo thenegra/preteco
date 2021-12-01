@@ -1217,3 +1217,69 @@ body{
 		}
 	}
 }
+
+.mob-menu{
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999999;
+	font-size: .75em;
+	display: none;
+	.close{
+		position: absolute;
+		right: 0;
+		top: 0em;
+		font-size: 2em;
+	}
+
+	.inner-menu{
+		padding: 1rem 0;
+		@include flexbox();
+		@include flex-direction(column);
+		@include justify-content(space-between);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		.container{
+			position: relative;
+			@include flexbox();
+			@include flex-direction(column);
+			//@include justify-content(space-between);
+			height: 100%;
+		}
+		.social-media{
+			position: absolute;
+			bottom: 0;
+			ul{
+				@include flexbox();
+				li{
+					a{
+						padding: 1em;
+						padding-left: 0;
+						font-size: 1.5em;
+					}
+				}
+			}
+
+		}
+		#menu{
+			font-size: 4.5em;
+			a{
+				text-decoration: none;
+				display: block;
+				line-height: 1;
+				margin-top: .5em;
+			}
+		}
+	}
+	h1{
+		img{
+			height: 2em;
+		}
+	}
+}
