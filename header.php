@@ -49,9 +49,15 @@ gtag('config', 'UA-82775308-5');
 	</div>
 </div>
 <script type="text/javascript">
+	$(document).ready(function(){
+		$('.mob-menu a').click(function(){
+			toggleMenu();
+		})
+	});
 	function toggleMenu(){
 		$('.mob-menu').fadeToggle();
 	}
+
 </script>
 <div class="linea-gradient small fill"></div>
 </header>
