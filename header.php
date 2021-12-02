@@ -36,7 +36,7 @@ gtag('config', 'UA-82775308-5');
 	<div class="container">
 	<div id="branding" >
 		<div id="site-title" itemprop="publisher">
-			<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
+			<h1><a href="<?php echo home_url( '/inicio/' );//echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
 		</div>
 	</div>
 	<div class="only-desk">
