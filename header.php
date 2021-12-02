@@ -66,7 +66,7 @@ gtag('config', 'UA-82775308-5');
 		
 		<div class="container">
 			<a class="close" onclick=""><i class="fa fa-close"></i></a>
-			<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
+			<h1><a href="<?php echo home_url('/inicio/'); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
 			<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
 			</nav>
