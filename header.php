@@ -30,9 +30,11 @@ gtag('config', 'UA-82775308-5');
 </script>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php wp_body_open(); 
+
+?>
 <div id="wrapper" class="hfeed">
-<header id="header" class="<?php if(!is_front_page() || is_page('inicio')){ echo 'sticky'; }?>" role="banner">
+<header id="header" class="<?php if(!is_page('inicio') && !is_front_page()){ echo 'sticky'; }?>" role="banner">
 	<div class="container">
 	<div id="branding" >
 		<div id="site-title" itemprop="publisher">
@@ -81,7 +83,8 @@ gtag('config', 'UA-82775308-5');
 		</div>
 	</div>
 </div>
-<?php if(is_front_page()):?>
+<?php if(is_page('inicio') || is_front_page()):?>
+
 <script type="text/javascript">
 	var sT;
 	$(document).ready(function(){
