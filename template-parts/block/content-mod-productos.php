@@ -7,17 +7,20 @@ if(get_field('color_fondo')){
 }
 ?>
 </div>
-<section class="text-block <?php echo $bg?>">
+<section  class="text-block <?php echo $bg?>" >
 	<?php blockBump($block); ?>
 	<div class="container">
 		<article class="text-container">
-			<h3 class="tit-two no-marg"><?php 
+			<h3 class="tit-two no-marg" data-aos="fade-right"><?php 
 			if(get_field('titulo')) { 
 				echo get_field('titulo',false,false); 
 			} else{ 
 				echo 'Productos';
 			}?></h3>
-			<?php if(get_field('descripcion')):?><?php echo get_field('descripcion');?><?php endif; ?>
+			<div data-aos="fade-right" data-duration="300">
+				<?php if(get_field('descripcion')):?><?php echo get_field('descripcion');?><?php endif; ?>	
+			</div>
+			
 		</article>
 		
 	</div>
@@ -27,17 +30,20 @@ if(get_field('color_fondo')){
 	<div class="container">
 		<?php
 		
-		 if(get_field('productos')):foreach(get_field('productos') as $producto):
+		 if(get_field('productos')):
+		 	$ct=1;
+		 	foreach(get_field('productos') as $producto):
+		 		$ct++;
 			?>
-			<article class="solution-item">
+			<article class="solution-item" >
 			<div class="card-top">
-				<span class="icono ptc-<?php echo $producto['icono']?>"></span>
-				<div class="contents">
+				<span class="icono ptc-<?php echo $producto['icono']?>" data-aos="fade-right" data-aos-duration="<?php echo (100+200*($ct%2));  ?>"></span>
+				<div class="contents" data-aos="fade-right" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 					<div>
 				<h3 class="tit-four"><?php remove_filter('acf_the_content', 'wpautop'); echo $producto['nombre'];add_filter('acf_the_content', 'wpautop');?></h3>
 				<?php echo $producto['descripcion'];?>
 			</div>
-			<nav class="nav-productos">
+			<nav class="nav-productos" data-aos="fade-right" data-aos-duration="<?php echo (350+200*($ct%2));  ?>">
 			<?php if($producto['link']):?>
 				<a href="<?php echo $producto['link']; ?>" class="boton">Ver más</a>
 

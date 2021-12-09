@@ -18,12 +18,12 @@
 	<div class="contenedor-numeros">
 		<article class="col-uno">
 			<div class="inner-half left">
-				<div class="mapa">
+				<div class="mapa" data-aos="fade-left">
 					<img src="<?php echo get_template_directory_uri()?>/img/mapa.png">
 				</div>
 				<div class="contenido">
-					<h3 class="tit-two"><span style="font-size: 2.2em;	">4</span> países</h3>
-					<ul class="lista">
+					<h3 class="tit-two" data-aos="fade-up" data-aos-duration="500"><span style="font-size: 2.2em;	">4</span> países</h3>
+					<ul class="lista" data-aos="fade-up" data-aos-duration="600">
 						<li>Argentina</li>
 						<li>Bolivia</li>
 						<li>Uruguay</li>
@@ -38,17 +38,17 @@
 			<div class="linea-gradient small inv only-mob"></div>
 			<div class="inner-content">
 				<div class="inner-half right">
-					<h4 class="tit-three">Quienes somos</h4>
-					<p>Somos una consultora integral de tecnología que desde hace más de dos décadas trabaja junto a los clientes para optimizar sus procesos de negocios, innovar o modernizar su infraestructura, a través de la implementación de las últimas soluciones digitales en el mercado.</p>
-					<p>Nuestra trayectoria y experiencia en aportar una solución integral, de acuerdo a las necesidades de cada empresa y organización, nos convierte en un aliado estratégico para sus negocios.</p>
+					<h4 class="tit-three" data-aos="fade-left" data-aos-duration="500">Quienes somos</h4>
+					<p data-aos="fade-left" data-aos-duration="600">Somos una consultora integral de tecnología que desde hace más de dos décadas trabaja junto a los clientes para optimizar sus procesos de negocios, innovar o modernizar su infraestructura, a través de la implementación de las últimas soluciones digitales en el mercado.</p>
+					<p data-aos="fade-left" data-aos-duration="700">Nuestra trayectoria y experiencia en aportar una solución integral, de acuerdo a las necesidades de cada empresa y organización, nos convierte en un aliado estratégico para sus negocios.</p>
 				</div>
 				<div class="linea-gradient small inv"></div>
 			</div>
 			<div class="inner-content">
 				<div class="inner-half right">
-					<h4 class="tit-three"><span class="t-verde">+</span>500 clientes en el sector privado y público</h4>
-					<p>Servicios financieros / Salud / Telco & Media / Manufactura / Retail</p>
-					<p><span class="t-verde">+</span> 30 Organismos Nacionales <span class="t-verde">+</span> 50 Organismos Provinciales <span class="t-verde">+</span> 150 Organismos Municipales</p>
+					<h4 class="tit-three"  data-aos="fade-left" data-aos-duration="500"><span class="t-verde">+</span>500 clientes en el sector privado y público</h4>
+					<p data-aos="fade-left" data-aos-duration="600">Servicios financieros / Salud / Telco & Media / Manufactura / Retail</p>
+					<p  data-aos="fade-left" data-aos-duration="700"><span class="t-verde">+</span> 30 Organismos Nacionales <span class="t-verde">+</span> 50 Organismos Provinciales <span class="t-verde">+</span> 150 Organismos Municipales</p>
 				</div>
 				<div class="linea-gradient small inv"></div>
 			</div>

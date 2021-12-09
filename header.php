@@ -86,6 +86,7 @@ gtag('config', 'UA-82775308-5');
 <?php if(is_page('inicio') || is_front_page()):?>
 
 <script type="text/javascript">
+	AOS.init();
 	var sT;
 	$(document).ready(function(){
 		$(document).scroll(checkScroll);

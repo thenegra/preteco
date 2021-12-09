@@ -32,6 +32,8 @@ function blankslate_enqueue() {
 wp_enqueue_style( 'blankslate-style', get_stylesheet_uri() );
 
 wp_enqueue_style( 'ico', get_template_directory_uri().'/css/icons.css' );
+wp_enqueue_style('aos','https://unpkg.com/aos@2.3.1/dist/aos.css');
+wp_enqueue_script('aos','https://unpkg.com/aos@2.3.1/dist/aos.js');
 wp_enqueue_script( 'jquer','https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
 wp_enqueue_script( 'slick','http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js' );
 wp_enqueue_style('slick','http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
