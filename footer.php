@@ -1,6 +1,6 @@
 
 
-<section class="form-block bg-blanco" id="contacto">
+<section class="form-block bg-negro" id="contacto">
 	<div class="linea-gradient small inv"></div>
 	<div class="container">
 		<h3 class="tit-two">Contactanos</h3>
@@ -8,7 +8,7 @@
 	</div>
 </section>
 </div>
-<footer id="footer" role="contentinfo" class="bg-gris">
+<footer id="footer" role="contentinfo" class="bg-verde">
 	<div class=""></div>
 	<div class="container">
 		<div class="brand">
