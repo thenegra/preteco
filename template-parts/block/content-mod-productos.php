@@ -35,7 +35,7 @@ if(get_field('color_fondo')){
 		 	foreach(get_field('productos') as $producto):
 		 		$ct++;
 			?>
-			<article class="solution-item " style="background:#f00;" data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
+			<article class="solution-item " data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 				<header class="imagen">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg">
 					<div class="hover">
