@@ -941,8 +941,8 @@ body{
 				margin-right: 1em;
 				a{
 					display: block;
-					background: $c_verde;
-					color: $c_gris;
+					background: $c_negro;
+					color: $c_verde;
 					line-height: 1.3;
 					width: 1.3em;
 					@include border-radius(.3em);
@@ -950,8 +950,8 @@ body{
 					@include animar();
 
 					&:hover{
-						background: $c_negro;
-						color: $c_blanco;
+						background: $c_gris;
+						//color: $c_negro;
 					}
 				}
 			}
@@ -1225,7 +1225,7 @@ body{
 #wa-button{
 	position: fixed;
 	bottom: 3rem;
-	right: 3rem;
+	right: 3vw;
 	background: $c_verde;
 	border: $c_negro 1px solid;
 	@include border-radius(1.6rem);
