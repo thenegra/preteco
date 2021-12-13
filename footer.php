@@ -3,8 +3,10 @@
 <section class="form-block bg-negro" id="contacto">
 	<div class="linea-gradient small inv"></div>
 	<div class="container">
-		<h3 class="tit-two">Contactanos</h3>
+		<h3 class="tit-two" data-aos="fade-up" data-aos-duration="300">Contactanos</h3>
+		<div class="form-container" data-aos="fade-up" data-aos-duration="450">
 		<?php echo do_shortcode('[contact-form-7 id="8" title="Contacto general"]');?>
+		</div>
 	</div>
 </section>
 </div>
@@ -13,8 +15,8 @@
 	<div class="container">
 		<div class="brand">
 			<div class="main">
-			<h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
-			<nav class="social-media only-desk">
+			<h1  data-aos="fade-right" data-aos-duration="300"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/img/logo-preteco.svg" alt="Preteco"></a></h1>
+			<nav class="social-media only-desk"  data-aos="fade-right" data-aos-duration="450">
 				<ul>
 					<li><a href="https://www.instagram.com/preteco_ar_bo_uy/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="https://es-la.facebook.com/preteco/" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -23,7 +25,7 @@
 				</ul>
 			</nav>
 		</div>
-		<div class="tagline">
+		<div class="tagline" data-aos="fade-right" data-aos-duration="300">
 					<img src="<?php echo get_template_directory_uri()?>/img/tagline.svg">
 
 				</div>
@@ -31,13 +33,13 @@
 		<div class="contact-info">
 			<ul class="hqs">
 				<li class="hq">
-					<p class="small pais"><strong>Argentina</strong></p>
-					<div class="oficina">
+					<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Argentina</strong></p>
+					<div class="oficina" data-aos="fade-right" data-aos-duration="450">
 						<p class="small">Los Patos 2590</p>
 						<p class="small">Piso 4</p>
 						<p class="small">CABA, Argentina</p>
 					</div>
-					<div class="oficina">
+					<div class="oficina" data-aos="fade-right" data-aos-duration="600">
 						<p class="small"> Av. Hipolito Yrigoyen 146</p>
 						<p class="small">Piso 15</p>
 						<p class="small">Córdoba, Argentina</p>
@@ -50,13 +52,13 @@
 				</li-->
 				
 				<li class="hq">
-					<p class="small pais"><strong>Bolivia</strong></p>
-					<div class="oficina">
+					<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Bolivia</strong></p>
+					<div class="oficina" data-aos="fade-right" data-aos-duration="450">
 						<p class="small">Calle 15 de Calacoto Nº 8089</p>
 						<p class="small">Torre Fergal piso 2 Oficina E.</p>
 						<p class="small">La Paz, Bolivia</p>
 					</div>
-					<div class="oficina">
+					<div class="oficina" data-aos="fade-right" data-aos-duration="600">
 						<p class="small">Equipetrol Norte y 4º anillo</p>
 						<p class="small">Calle K Nº 279, Edificil Hotel</p>
 						<p class="small">Santa Cruz, Bolivia</p>
@@ -69,16 +71,16 @@
 					<p class="small">Santa Cruz, Bolivia</p>
 				</li-->
 				<li class="hq">
-					<p class="small pais"><strong>Colombia</strong></p>
-					<div class="oficina">
+					<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Colombia</strong></p>
+					<div class="oficina"  data-aos="fade-right" data-aos-duration="450">
 						<p class="small">Calle 72 número 9-55 oficina 502</p>
 					<p class="small">Bogota, Colombia</p>
 					</div>
 					
 					<div class="oficina">
-						<p class="small pais"><strong>Uruguay</strong></p>
-						<p class="small">Uruguay Rincon 602 piso 6</p>
-						<p class="small">Montevideo, Uruguay</p>
+						<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Uruguay</strong></p>
+						<p class="small" data-aos="fade-right" data-aos-duration="450">Uruguay Rincon 602 piso 6</p>
+						<p class="small" data-aos="fade-right" data-aos-duration="600">Montevideo, Uruguay</p>
 					</div>
 				</li>
 				<!--li class="hq">

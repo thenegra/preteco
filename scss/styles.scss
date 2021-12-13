@@ -201,6 +201,22 @@ body{
 	.boton{
 		@include background-image(linear-gradient(90deg, $c_blanco 10%, $c_verde 25%));
 	}
+	.bg-secundario{
+		background: $c_gris;
+	}
+}
+.bg-verde{
+	.boton{
+		@include background-image(linear-gradient(90deg, $c_verde 25%, $c_gris 40%));
+	}
+	.bg-secundario{
+		background: $c_gris;
+	}
+}
+.bg-gris .bg-secundario{
+	.boton{
+		@include background-image(linear-gradient(90deg, $c_verde 25%, $c_gris 40%));
+	}
 }
 .linea-gradient{
 	display: block;
@@ -249,12 +265,20 @@ body{
 }
 .bg-gris{
 	background: $c_gris;
+	.bg-secundario{
+		background: $c_verde;
+	}
 }
 .bg-blanco{
 	background: $c_blanco;
+
 }
 .bg-verde{
 	background: $c_verde;
+	.bg-secundario{
+		background: $c_gris;
+		color: $c_negro;
+	}
 }
 .bg-grisoscuro{
 	background: $c_grisoscuro;
@@ -263,6 +287,10 @@ body{
 .bg-negro{
 	background: $c_negro;
 	color: $c_blanco;
+	.bg-secundario{
+		background: $c_verde;
+		color: $c_negro;
+	}
 }
 .t-gris{
 	color: $c_gris;
@@ -538,6 +566,10 @@ body{
 			margin:0;
 			margin-right: 4%;
 			margin-bottom: 3rem;
+			@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(stretch);
+				@include align-items(stretch);
 			@media all and (max-width: 480px){
 				width: 100%;
 				margin: 0;
@@ -557,6 +589,7 @@ body{
 				*{
 					margin:0;
 				}
+
 			}
 			.icono{
 				//color: $c_negro;
@@ -572,17 +605,30 @@ body{
 				}
 
 			}
+			.imagen{
+				img{
+					display: block;
+					height: 10rem;
+					width: 100%;
+					object-fit:cover;
+				}
+			}
 			.card-top{
 				
+
 				box-sizing:border-box;
-				min-height: 18rem;
-				width: 100%;
-				height: 100%;
+				//min-height: 18rem;
+				
 				//	padding: 5%;
+
 				@include flexbox();
 				@include flex-direction(column);
 				@include justify-content(stretch);
 				@include align-items(flex-start);
+
+				/* nuevo */
+				height: 100%;
+				/* fin de lo nuevo */
 				ul{
 					display: block;
 					li{
@@ -626,16 +672,37 @@ body{
 					}
 				}
 				.contents{
-					max-width: 90%;
-					height: 80%;
+					//max-width: 90%;
+					//height: 80%;
 					@include flexbox();
 					@include flex-direction(column);
 					@include justify-content(space-between);
 					@include align-items(flex-start);
 					@media all and (max-width: 480px){
 						height: auto;
-					max-width: 100%;
-			}
+						max-width: 100%;
+					}
+
+					.card-header{
+						@include flexbox();
+						@include justify-content(space-between);
+						@include align-items(center);
+						padding: 1rem 0;
+						border-bottom: 1px solid;
+						h3{
+							margin-bottom: 0;
+						}
+						.icono{
+							font-size: 3em;
+							margin: 0;
+						}
+					}
+					.card-contents,.card-header{
+						padding: 1rem 2rem;
+					}
+					.card-contents{
+						padding-bottom: 2.5rem;
+					}
 				}
 				h3{
 					margin-bottom: .5em;
@@ -1093,14 +1160,14 @@ body{
 			h3{
 				width: 40%;
 			}	
-			.wpcf7{
+			.form-container{
 				width: 60%;
 			}
 			@media all and (max-width: 960px){
 				h3{
 					width: 33%;
 				}
-				.wpcf7{
+				.form-container{
 					width: 66%;
 				}
 			}
