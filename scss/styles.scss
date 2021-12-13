@@ -1222,7 +1222,55 @@ body{
 		}
 	}
 }
-
+#wa-button{
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	background: $c_verde;
+	border: $c_negro 1px solid;
+	@include border-radius(1.6rem);
+	color: $c_negro;
+	
+	padding: .5em 1em;
+	/*@include flexbox();
+	@include flex-wrap(nowrap);
+	@include flex-direction(flex-end);
+	@include align-items(center);*/
+	i,span{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	span{
+		margin-left: .5em;
+		position: relative;
+		top: .35em;
+		max-width: 0;
+		@include animar(all,.5s,ease-out);
+		overflow: hidden;
+		height: 1em;
+		margin-left: 0;
+		@include opacity(0);
+		white-space: nowrap;
+		
+	}
+	i{
+		font-size: 2em;
+		margin-left: 0;
+		
+	}
+	&:hover{
+		span{
+			margin-left: .5em;
+			max-width: 20em;
+			height: 2em;
+			@include opacity(1);
+			
+		}
+		i{
+			margin-left: .25em;
+		}
+	}
+}
 .mob-menu{
 
 	position: fixed;
@@ -1267,6 +1315,7 @@ body{
 						padding: 1em;
 						padding-left: 0;
 						font-size: 1.75em;
+						text-decoration: underline;
 					}
 				}
 			}

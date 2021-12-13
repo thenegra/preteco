@@ -96,6 +96,7 @@
 			</nav>
 	</div>
 </footer>
+<a id="wa-button" href="https://api.whatsapp.com/send?phone=5491140728806&text=%C2%A1Hola!%20Me%20comunico%20desde%20http%3A%2F%2Fwww.preteco.com%2F" target="_blank"><span>Contactanos por WhatsApp</span><i class="fa fa-whatsapp"></i></a>
 <div class="linea-gradient"></div>
 
 </div>
