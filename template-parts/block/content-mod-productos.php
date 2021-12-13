@@ -37,17 +37,19 @@ if(get_field('color_fondo')){
 			?>
 			<article class="solution-item " data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 				<header class="imagen">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg">
-					<div class="hover">
-						<span></span>
-					</div>
+					<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg">
+						<div class="hover">
+							<span><?php echo $producto['nombre']; ?></span>
+						</div>
+					</a>
 				</header>
 			<div class="card-top bg-secundario">
 				<!--span class="icono ptc-<?php echo $producto['icono']?>" data-aos="fade-right" data-aos-duration="<?php echo (100+200*($ct%2));  ?>"></span-->
 				<div class="contents" data-aos="fade-right" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 					<div>
 						<header class="card-header">
-				<h3 class="tit-four"><?php remove_filter('acf_the_content', 'wpautop'); echo $producto['nombre'];add_filter('acf_the_content', 'wpautop');?></h3>
+				<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')"><h3 class="tit-four"><?php remove_filter('acf_the_content', 'wpautop'); echo $producto['nombre'];add_filter('acf_the_content', 'wpautop');?></h3></a>
 				<span class="icono ptc-<?php echo $producto['icono']?>" data-aos="fade-right" data-aos-duration="<?php echo (100+200*($ct%2));  ?>"></span>
 						</header>
 						<div class="card-contents">
