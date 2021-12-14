@@ -582,7 +582,7 @@ body{
 			@media all and (max-width: 480px){
 				width: 100%;
 				margin: 0;
-				margin-bottom: 5rem;
+				margin-bottom: 2rem;
 
 				&:last-child{
 					margin-bottom: 0rem;
@@ -701,13 +701,13 @@ body{
 					
 
 					&:after{
-						content: "";
+						/*content: "";
 						position: absolute;
 						top: -2.5rem;
 						left: -15%;
 						width: 130%;
 						height: 1px;
-						background: $c_verde;
+						background: $c_verde;*/ 
 						//@include background(linear-gradient(90deg, $c_gris 20%, $c_verde 50%));
 					}
 				}
@@ -1432,7 +1432,7 @@ body{
 		#menu{
 			font-size: 4em;
 			a{
-				text-decoration: none;
+				text-decoration: underline;
 				display: block;
 				line-height: 1;
 				margin-top: .5em;
