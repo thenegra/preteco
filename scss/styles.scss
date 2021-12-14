@@ -575,6 +575,7 @@ body{
 			margin:0;
 			margin-right: 4%;
 			margin-bottom: 3rem;
+			overflow: hidden;
 			@include flexbox();
 				@include flex-direction(column);
 				@include justify-content(stretch);
