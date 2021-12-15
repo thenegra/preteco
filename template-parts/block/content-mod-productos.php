@@ -38,7 +38,10 @@ if(get_field('color_fondo')){
 			<article class="solution-item " data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 				<header class="imagen">
 					<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg">
+						<!--img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg"-->
+						<?php
+						
+						echo wp_get_attachment_image($producto['foto']['ID'],'medium'); ?>
 						<div class="hover">
 							<span><?php echo $producto['nombre']; ?></span>
 						</div>

@@ -41,6 +41,10 @@ wp_enqueue_style('slick','http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick
 wp_enqueue_style('Font_Awesome');
 wp_enqueue_style( 'css', get_template_directory_uri().'/css/styles.css' );
 }
+function admin_style() {
+  wp_enqueue_style( 'css', get_template_directory_uri().'/css/styles.css' );
+}
+add_action('admin_enqueue_scripts', 'admin_style');
 add_action( 'wp_footer', 'blankslate_footer' );
 function blankslate_footer() {
 ?>
