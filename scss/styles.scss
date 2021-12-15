@@ -30,7 +30,8 @@ a{
 		text-decoration: none;
 	}
 }
-ul.lista{
+#container{
+ul{
 	display: block;
 	li{
 		display: block;
@@ -48,6 +49,15 @@ ul.lista{
 
 		}
 	}
+}
+
+.bg-verde,.bg-gris .bg-secundario{
+	ul li{
+		&:after{
+			background: $c_negro
+		}
+	}
+}
 }
 body{ 
 	&:not(.wp-admin){
@@ -209,19 +219,29 @@ body{
 	}
 }
 .bg-blanco{
-	.boton{
-		@include background-image(linear-gradient(90deg, $c_blanco 10%, $c_verde 25%));
-	}
+	
+		.boton{
+			@include background-image(linear-gradient(90deg, $c_blanco 10%, $c_verde 25%));
+		}
+
 	.bg-secundario{
 		background: $c_gris;
+		.boton{
+			@include background-image(linear-gradient(90deg, $c_gris 10%, $c_verde 25%));
+		}
 	}
 }
 .bg-verde{
-	.boton{
-		@include background-image(linear-gradient(90deg, $c_verde 25%, $c_gris 40%));
+	:not(.bg-secundario){
+		.boton{
+			@include background-image(linear-gradient(90deg, $c_verde 25%, $c_gris 40%));
+		}
 	}
 	.bg-secundario{
 		background: $c_gris;
+		.boton{
+			@include background-image(linear-gradient(90deg, $c_gris 10%, $c_verde 25%));
+		}
 	}
 }
 .bg-gris .bg-secundario{
@@ -282,7 +302,9 @@ body{
 }
 .bg-blanco{
 	background: $c_blanco;
-
+	.bg-secundario{
+		background: $c_gris;
+	}
 }
 .bg-verde{
 	background: $c_verde;
@@ -301,6 +323,9 @@ body{
 	.bg-secundario{
 		background: $c_verde;
 		color: $c_negro;
+		.boton{
+			@include background-image(linear-gradient(90deg, $c_verde 25%, $c_gris 40%));
+		}
 	}
 }
 .t-gris{
