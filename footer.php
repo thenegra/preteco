@@ -77,10 +77,10 @@
 					<p class="small">Bogota, Colombia</p>
 					</div>
 					
-					<div class="oficina">
-						<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Uruguay</strong></p>
-						<p class="small" data-aos="fade-right" data-aos-duration="450">Uruguay Rincon 602 piso 6</p>
-						<p class="small" data-aos="fade-right" data-aos-duration="600">Montevideo, Uruguay</p>
+					<div class="oficina" data-aos="fade-right" data-aos-duration="450">
+						<p class="small pais" ><strong>Uruguay</strong></p>
+						<p class="small" >Uruguay Rincon 602 piso 6</p>
+						<p class="small" >Montevideo, Uruguay</p>
 					</div>
 				</li>
 				<!--li class="hq">

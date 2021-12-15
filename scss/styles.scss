@@ -31,7 +31,8 @@ a{
 	}
 }
 #container{
-	ul{
+
+	ul:not(.slick-slider){
 		display: block;
 		li{
 			display: block;
