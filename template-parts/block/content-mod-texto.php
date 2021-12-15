@@ -8,9 +8,11 @@
 			<div data-aos="fade-up" data-delay="400">
 				<?php echo get_field('texto');?>
 			</div>
+			<div data-aos="fade-up" data-delay="600" >
 			<?php if(get_field('boton')['url']):?>
-				<a data-aos="fade-up" data-delay="600" class="boton" href="<?php echo get_field('boton')['url'];?>"><?php echo get_field('boton')['texto'];?></a>
+				<a class="boton" href="<?php echo get_field('boton')['url'];?>"><?php echo get_field('boton')['texto'];?></a>
 			<?php endif;?>
+			</div>
 		</article>
 	</div>
 </section>
