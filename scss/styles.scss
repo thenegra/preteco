@@ -50,7 +50,6 @@ ul.lista{
 	}
 }
 body{ 
-	
 	&:not(.wp-admin){
 		form{
 			display: block;
@@ -58,6 +57,7 @@ body{
 			.wpcf7-submit{
 					margin-left: auto;
 					width: auto;
+
 				}
 				.wpcf7-spinner{
 					display: none;
