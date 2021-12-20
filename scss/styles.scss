@@ -59,6 +59,13 @@ a{
 			}
 		}
 	}
+	.bg-verde,.bg-gris .bg-secundario,.bg-negro .bg-secundario{
+		ul li{
+			&:after{
+				background: $c_negro;
+			}
+		}
+	}
 	.bg-verde .bg-secundario{
 		ul li{
 			&:after{
