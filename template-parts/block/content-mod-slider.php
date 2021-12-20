@@ -24,7 +24,7 @@
 	</div>
 </section>
 <script type="text/javascript">
-	$('#<?php echo $id;?> .slider-container').slick({dots:true,arrows:false});
+	$('#<?php echo $id;?> .slider-container').slick({dots:true,arrows:false, autoplay: true, autoplaySpeed: 3000});
 
 </script>
 <div class="linea-gradient"></div>
