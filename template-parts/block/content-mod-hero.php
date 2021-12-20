@@ -1,6 +1,6 @@
 <!-- Bloque hero -->
 </div>
-<section class="main-hero bg-gris">
+<section class="main-hero bg-verde">
 	<div class="container full">
 		<div class="col-uno">
 			<div class="inner-half left">
@@ -10,7 +10,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-dos bg-verde">
+		<div class="col-dos bg-gris">
 				<div class="inner-half right">
 				<ul class="slider-main">
 					<li class="slider-unit">
