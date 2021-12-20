@@ -10,7 +10,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-dos bg-gris">
+		<div class="col-dos bg-negro">
 				<div class="inner-half right">
 				<ul class="slider-main">
 					<li class="slider-unit">
