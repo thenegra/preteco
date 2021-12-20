@@ -30,5 +30,5 @@
 		</div>
 	</div>
 </section>
-<div class="linea-gradient small fill"></div>
+<div class="linea-gradient"></div>
 <div class="container">
