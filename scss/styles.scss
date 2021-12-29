@@ -562,7 +562,7 @@ body{
 			@include flex-direction(row);
 			@include justify-content(stretch);
 			@include align-items(stretch);
-			height: 90vh;
+			min-height: 80vh;
 		}
 		.col-uno,.col-dos{
 			width: 50%;
@@ -595,6 +595,17 @@ body{
 				padding-bottom: 0;
 				@include flexbox();
 				@include align-items(stretch);
+				.slick-dots{
+					@include justify-content(flex-start);
+					padding-left: 4rem;
+					li{
+						border-color: $c_blanco;
+						@include box-shadow(0 0 10px rgba(0,0,0,.3));
+						&.slick-active{
+							background: $c_blanco;
+						}
+					}
+				}
 				.slider-unit{
 					height: 100%;
 					@include flexbox();
@@ -603,14 +614,14 @@ body{
 
 					article{
 						padding-left: 4rem;
-						max-height: 40vh;
+						
 						@include flex-grow(1)
 						//background: $c_verde;	
 					}
 					.img-container{
-						max-height: 40vh;
+						
 						width: 50vw;
-						@include flex-grow(1);
+						@include flex-grow(1.5);
 						position: relative;
 					}
 					img{
@@ -619,13 +630,16 @@ body{
 						@media all and (min-width: 769px){
 							height: 100%;
 							object-fit: cover;
-							position: absolute;
+							min-height: 10em;
+							max-height: 45vh;
 							object-position: center;
 						}
 					}
 					
 					h4{
 						//max-width: 13em;
+						max-width: calc(720px - 4rem);
+						width: calc(45vw - 4rem);
 					}
 				}
 

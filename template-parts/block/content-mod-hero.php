@@ -37,7 +37,7 @@
 </section>
 <?php if(count(get_field('contenidos'))>1):?>
 <script type="text/javascript">
-	$('#<?php echo $id;?> .slider-main').slick({dots:true,arrows:false, autoplay: false, autoplaySpeed: 3000});
+	$('#<?php echo $id;?> .slider-main').slick({dots:true,arrows:false, autoplay: true, autoplaySpeed: 4500});
 </script>
 <?php endif; ?>
 <div class="linea-gradient inv"></div>
