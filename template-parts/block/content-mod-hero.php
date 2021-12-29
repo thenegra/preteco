@@ -13,11 +13,12 @@
 		<div class="col-dos bg-blanco">
 				<div class="inner-half right">
 				<ul class="slider-main">
+					<?php foreach(get_field('contenidos') as $contenido):?>
 					<li class="slider-unit">
 
 						<article class="">
-							
-							<h4 class="tit-four">Más de 20 años potenciando diariamente la innovación de nuestros clientes. Gestionamos los datos punta a punta, desde la obtención hasta la activación del proyecto, para convertirlos en negocios concretos y escalables.</h4>
+							<span style="font-size: .4em"><?php var_dump($contenido); ?></span>
+							<h4 class="tit-four"><?php echo $contenido['texto'];?></h4>
 							
 						</article>
 						<div class="img-container">
