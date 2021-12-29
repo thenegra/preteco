@@ -49,7 +49,7 @@
 		</div>
 	</div>
 </section>
-<?php if(count(get_field('contenidos'))>1):?>
+<?php if(get_field('contenidos') && count(get_field('contenidos'))>1):?>
 <script type="text/javascript">
 	$('#<?php echo $id;?> .slider-main').slick({dots:true,arrows:false, autoplay: true, autoplaySpeed: 4500});
 </script>
