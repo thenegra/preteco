@@ -1,6 +1,7 @@
 <!-- Bloque hero -->
+<?php $id='bloque-'.generateRandomString(); ?>
 </div>
-<section class="main-hero bg-verde">
+<section class="main-hero bg-verde" id="<?php echo $id; ?>">
 	<div class="container full">
 		<div class="col-uno">
 			<div class="inner-half left">
@@ -13,6 +14,7 @@
 		<div class="col-dos bg-blanco">
 				<div class="inner-half right">
 				<ul class="slider-main">
+
 					<?php foreach(get_field('contenidos') as $contenido):?>
 					<li class="slider-unit">
 
@@ -33,5 +35,10 @@
 		</div>
 	</div>
 </section>
+<?php if(count(get_field('contenidos'))>1):?>
+<script type="text/javascript">
+	$('#<?php echo $id;?> .slider-main').slick({dots:true,arrows:false, autoplay: false, autoplaySpeed: 3000});
+</script>
+<?php endif; ?>
 <div class="linea-gradient inv"></div>
 <div class="container">
