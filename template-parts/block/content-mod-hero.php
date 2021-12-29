@@ -14,7 +14,7 @@
 		<div class="col-dos bg-blanco">
 				<div class="inner-half right">
 				<ul class="slider-main">
-					<?php if(count(get_field('contenidos'))>1):?>
+					<?php if(get_field('contenidos')):?>
 					<?php foreach(get_field('contenidos') as $contenido):?>
 					<li class="slider-unit">
 
