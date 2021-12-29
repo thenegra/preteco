@@ -25,6 +25,7 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg" alt="Image placeholder">
 						</div>
 					</li>
+					<?php endforeach; ?>
 				</ul>
 				</div>
 			</div>
