@@ -17,7 +17,7 @@
 					<li class="slider-unit">
 
 						<article class="">
-							<span style="font-size: .4em"><?php var_dump($contenido); ?></span>
+							
 							<h4 class="tit-four"><?php echo $contenido['texto'];?></h4>
 							
 						</article>
