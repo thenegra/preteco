@@ -1,7 +1,7 @@
 <!-- Bloque hero -->
 <?php $id='bloque-'.generateRandomString(); ?>
 </div>
-<section class="slider-hero bg-gris" id="<?php echo $id; ?>">
+<section class="block slider-hero bg-gris" id="<?php echo $id; ?>">
 	<div class="container full">
 		<ul class="slider-container">
 			<?php foreach(get_field('slider') as $slide): ?>

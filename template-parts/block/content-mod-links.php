@@ -1,7 +1,14 @@
 <!-- Bloque de texto -->
+<?php 
+$id = $block['id'];
+$bg = 'bg-blanco';
+if(get_field('color_fondo')){
+	$bg = 'bg-'.get_field('color_fondo');
+}
+?>
 </div>
 
-<section class="text-block bg-<?php if(get_field('color')){ echo get_field('color'); } else{ echo 'blanco';}?>">
+<section class="block text-block <?php echo $bg; ?>">
 	<div class="container">
 		<article class="text-container">
 			<h3 class="tit-two"><?php echo get_field('titulo');?></h3>

@@ -1,7 +1,7 @@
 <!-- Bloque hero -->
 <?php $id='bloque-'.generateRandomString(); ?>
 </div>
-<section class="main-hero bg-verde" id="<?php echo $id; ?>">
+<section class="block main-hero bg-verde" id="<?php echo $id; ?>">
 	<div class="container full">
 		<div class="col-uno">
 			<div class="inner-half left">

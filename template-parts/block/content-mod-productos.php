@@ -7,7 +7,7 @@ if(get_field('color_fondo')){
 }
 ?>
 </div>
-<section  class="text-block <?php echo $bg?>" >
+<section  class="block text-block <?php echo $bg?>" >
 	<?php blockBump($block); ?>
 	<div class="container">
 		<article class="text-container">
@@ -25,7 +25,7 @@ if(get_field('color_fondo')){
 		
 	</div>
 </section>
-<section class="solution-block <?php echo $bg?>">
+<section class="block solution-block <?php echo $bg?>">
 
 	<div class="container">
 		<?php

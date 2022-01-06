@@ -13,7 +13,7 @@
 		
 	</div>
 </section-->
-<section class="numeros-block bg-negro">
+<section class="block numeros-block bg-negro">
 	<div class="linea-gradient small inv "></div>
 	<div class="contenedor-numeros">
 		<article class="col-uno">

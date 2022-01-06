@@ -172,7 +172,7 @@ html,body{
 	overflow-x: hidden;
 }
 body{
-	background: $c_gris;
+	//background: $c_gris;
 	//background: #f00;
 	color: $c_negro;
 	font-family: 'Titillium Web', sans-serif;
@@ -184,7 +184,7 @@ body{
 		max-width: 100%;
 		height: auto;
 	}
-	h1,h2,h3,h4{
+	h1,h2,h3,h4,h5,h6{
 		margin-bottom: 1em;
 		strong{
 			display: inline-block;
@@ -203,9 +203,12 @@ body{
 	.no-marg{
 		margin-bottom: 0;
 	}
-	p{
+	p,ul{
 		color: inherit;
 		font-size: 1.3rem;
+		&:not(.slick-slider){
+			max-width: 60rem;
+		}
 		&.small{
 			font-size: 1rem;
 		}
@@ -262,7 +265,9 @@ body{
 	}
 }
 .bg-blanco{
-	
+		ul:not(.slick-slider):not(.slider-main):not(.slick-dots) li:after{
+			background: $c_gris;
+		}
 		.boton{
 			@include background-image(linear-gradient(90deg, $c_blanco 10%, $c_verde 25%));
 		}
@@ -306,35 +311,88 @@ body{
 	&.fill{
 		background: $c_verde;
 	}
+	&.gris{
+		background: $c_gris;
+	}
+	&.negro{
+		background: $c_negro;
+	}
+}
+.tit-more{
+	font-size: 4.5rem!important;
+	@media all and (max-width: 768px){
+		font-size: 3rem!important;
+	}
 }
 .tit-one{
-	font-size: 3rem;
+	font-size: 3rem!important;
 	@media all and (max-width: 768px){
-		font-size: 2rem;
+		font-size: 2rem!important;
 	}
 }
 .tit-two{
-	font-size: 2.4rem;
+	font-size: 2.4rem!important;
 	@media all and (max-width: 768px){
-		font-size: 1.7rem;
+		font-size: 1.7rem!important;
 	}
 }
 .tit-three{
-	font-size: 2rem;
+	font-size: 2rem!important;
 	@media all and (max-width: 768px){
-		font-size: 1.5rem;
+		font-size: 1.5rem!important;
 	}
 }
 .tit-four{
-	font-size: 1.6rem;
+	font-size: 1.6rem!important;
 	@media all and (max-width: 768px){
-		font-size: 1.3rem;
+		font-size: 1.3rem!important;
 	}
 }
 .tit-five{
-	font-size: 1.3rem;
+	font-size: 1.3rem!important;
 	@media all and (max-width: 768px){
-		font-size: 1.1rem;
+		font-size: 1.1rem!important;
+	}
+}
+.page-main{
+
+	h2,h3,h4,h5,h6{
+		margin-top: 1.5em;
+	}
+	.block{
+		h2,h3,h4,h5,h6{
+		margin-top: 0em;
+	}
+	}
+	h1{
+		font-size: 3rem;
+		@media all and (max-width: 768px){
+			font-size: 2rem;
+		}
+	}
+	h2{
+		font-size: 2.4rem;
+		@media all and (max-width: 768px){
+			font-size: 1.7rem;
+		}
+	}
+	h3{
+		font-size: 2rem;
+		@media all and (max-width: 768px){
+			font-size: 1.5rem;
+		}
+	}
+	h4{
+		font-size: 1.6rem;
+		@media all and (max-width: 768px){
+			font-size: 1.3rem;
+		}
+	}
+	h5,h6{
+		font-size: 1.3rem;
+		@media all and (max-width: 768px){
+			font-size: 1.1rem;
+		}
 	}
 }
 .bg-gris{
@@ -444,6 +502,8 @@ body{
 		nav{
 			ul{
 				display: block;
+				font-size: 1em;
+				margin-top: 0;
 				li{
 					display: inline-block;
 
@@ -655,6 +715,20 @@ body{
 	padding: 4rem 0 4.5rem 0;
 	@media all and (max-width: 768px){
 		padding: 3rem 0 3.5rem 0;
+	}
+	.columnas{
+		
+		@media all and (min-width: 769px){
+			@include flexbox();
+			@include flex-wrap(wrap);
+			.columna{
+				width: 48%;
+				margin-right: 2%;
+			}
+		}
+		.columna{
+			margin-bottom: 3em;
+		}
 	}
 	.text-container{
 		max-width: 60em;
@@ -1156,6 +1230,7 @@ body{
 		ul{
 			@include flexbox();
 			margin-top: .3rem;
+			font-size: 1em;
 			li{
 				margin-right: 1em;
 				a{
@@ -1203,7 +1278,7 @@ body{
 			}
 		}
 		.hqs{
-			
+			margin-top: 0;
 			@media all and (min-width: 481px){
 				@include flexbox();
 				@include flex-wrap(wrap);
@@ -1568,7 +1643,15 @@ body{
 }
 
 
-
+/* Page */
+.page-header{
+	display: block;
+	background: $c_verde;
+	padding: 12rem 0 4rem;
+	.tit-one{
+		margin-bottom: 0;
+	}
+}
 
 /* WP Admin */
 .wp-admin{
@@ -1581,3 +1664,6 @@ body{
 		z-index: 99999999;
 	}
 }
+
+
+

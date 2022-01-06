@@ -31,15 +31,15 @@
 				</div>
 		</div>
 		<div class="contact-info">
-			<ul class="hqs">
+			<ul class="hqs" data-aos="fade-right" data-aos-duration="450">
 				<li class="hq">
-					<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Argentina</strong></p>
-					<div class="oficina" data-aos="fade-right" data-aos-duration="450">
+					<p class="small pais" ddata-aos="fade-right" ddata-aos-duration="300"><strong>Argentina</strong></p>
+					<div class="oficina" ddata-aos="fade-right" ddata-aos-duration="450">
 						<p class="small">Los Patos 2590</p>
 						<p class="small">Piso 4</p>
 						<p class="small">CABA, Argentina</p>
 					</div>
-					<div class="oficina" data-aos="fade-right" data-aos-duration="600">
+					<div class="oficina" ddata-aos="fade-right" ddata-aos-duration="600">
 						<p class="small"> Av. Hipolito Yrigoyen 146</p>
 						<p class="small">Piso 15</p>
 						<p class="small">Córdoba, Argentina</p>
@@ -52,13 +52,13 @@
 				</li-->
 				
 				<li class="hq">
-					<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Bolivia</strong></p>
-					<div class="oficina" data-aos="fade-right" data-aos-duration="450">
+					<p class="small pais" ddata-aos="fade-right" ddata-aos-duration="300"><strong>Bolivia</strong></p>
+					<div class="oficina" ddata-aos="fade-right" ddata-aos-duration="450">
 						<p class="small">Calle 15 de Calacoto Nº 8089</p>
 						<p class="small">Torre Fergal piso 2 Oficina E.</p>
 						<p class="small">La Paz, Bolivia</p>
 					</div>
-					<div class="oficina" data-aos="fade-right" data-aos-duration="600">
+					<div class="oficina" ddata-aos="fade-right" ddata-aos-duration="600">
 						<p class="small">Equipetrol Norte y 4º anillo</p>
 						<p class="small">Calle K Nº 279, Edificil Hotel</p>
 						<p class="small">Santa Cruz, Bolivia</p>
@@ -71,13 +71,13 @@
 					<p class="small">Santa Cruz, Bolivia</p>
 				</li-->
 				<li class="hq">
-					<p class="small pais" data-aos="fade-right" data-aos-duration="300"><strong>Colombia</strong></p>
-					<div class="oficina"  data-aos="fade-right" data-aos-duration="450">
+					<p class="small pais" ddata-aos="fade-right" ddata-aos-duration="300"><strong>Colombia</strong></p>
+					<div class="oficina"  ddata-aos="fade-right" ddata-aos-duration="450">
 						<p class="small">Calle 72 número 9-55 oficina 502</p>
 					<p class="small">Bogota, Colombia</p>
 					</div>
 					
-					<div class="oficina" data-aos="fade-right" data-aos-duration="450">
+					<div class="oficina" ddata-aos="fade-right" ddata-aos-duration="450">
 						<p class="small pais" ><strong>Uruguay</strong></p>
 						<p class="small" >Uruguay Rincon 602 piso 6</p>
 						<p class="small" >Montevideo, Uruguay</p>

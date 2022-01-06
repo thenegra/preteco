@@ -215,8 +215,17 @@ function my_acf_init() {
 		));
 		acf_register_block(array(
 			'name'				=> 'mod-texto',
-			'title'				=> __('Preteco: Bloque texto'),
+			'title'				=> __('Preteco: Módulo texto'),
 			'description'		=> __('Bloque con título y texto común'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'texto' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-columnas',
+			'title'				=> __('Preteco: Módulo columnas valores'),
+			'description'		=> __('Bloque con título y lístado de valores, misiones, etc. '),
 			'render_callback'	=> 'render_block_acf',
 			'category'			=> 'custom',
 			'icon'				=> 'grid-view',
@@ -239,6 +248,15 @@ function my_acf_init() {
 			'category'			=> 'custom',
 			'icon'				=> 'grid-view',
 			'keywords'			=> array( 'slider, hero' ),
+		));
+		acf_register_block(array(
+			'name'				=> 'mod-linea',
+			'title'				=> __('Preteco: Línea'),
+			'description'		=> __('Bloque visual de línea divisoria'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'linea, separador' ),
 		));
 	}
 }

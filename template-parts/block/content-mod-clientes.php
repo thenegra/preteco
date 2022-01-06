@@ -3,7 +3,7 @@
 ?>
 <!-- Bloque de clientes -->
 </div>
-<section class="text-block bg-blanco">
+<section class="block text-block bg-blanco">
 
 	<div class="container">
 		<article class="text-container">
@@ -17,7 +17,7 @@
 		
 	</div>
 </section>
-<section class="clientes-block bg-blanco">
+<section class="block clientes-block bg-blanco">
 	<div class="container">
 		<ul class="clientes">
 			<div class="content-slick">
