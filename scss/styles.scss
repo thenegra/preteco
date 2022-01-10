@@ -502,23 +502,75 @@ body{
 		nav{
 			ul{
 				display: block;
-				font-size: 1em;
+				font-size: inherit;
+				@media all and (min-width: 768px){
+					font-size: 0;	
+				}
+				
 				margin-top: 0;
-				li{
-					display: inline-block;
 
+				li.menu-item{
+					@media all and (min-width: 768px){
+						font-size: 1rem;	
+					}
+					//font-size: 1rem;
+					font-size: inherit;
+					display: inline-block;
+					position: relative;
+					.sub-menu{
+						max-height: 0;
+						overflow: hidden;
+						@include animar();
+						a{
+							pointer-events: all;	
+						}
+						
+						@media all and (min-width: 769px){
+							position: absolute;
+							top: 100%;
+							left: 0;
+							min-width: 12em;
+							white-space: nowrap;
+						}
+						
+						li{
+							display: block;
+							background: $c_gris;
+							&.current-menu-item{
+								background: $c_negro;
+								color: $c_blanco;
+							}
+							a{
+								&:after{
+									display: none;
+								}
+								&:hover{
+									background: $c_verde;
+									color: $c_negro;
+								}
+								
+							}
+						}
+					}
+					&:hover{
+						.sub-menu{
+							max-height: 20rem;
+						}
+					}
 					a{
 						display: block;
-						padding: .5rem;
+						padding: 1.5rem .5rem;
 						color: inherit;
 						text-decoration: none;
 						position: relative;
+						@include animar();
+
 						&:after{
 
 							position: absolute;
 							content: "";
-							background-color: $c_negro;
-							bottom: .5rem;
+							//background-color: $c_negro;
+							bottom: 1.2rem;
 							left: 0;
 							right: 100%;	
 							height: .05em;
@@ -526,20 +578,34 @@ body{
 			
 						}
 						&:hover{
+							background: $c_verde;
 							&:after{
 								left: .5rem;
 								right: .5rem;
 							}
 						}
 					}
+					&.current-page-ancestor{
+						background: $c_verde;
+						//color: $c_blanco;
+					}
 					&.current-menu-item{
+						background: $c_verde;
 						a{
 							pointer-events: none;
 							&:after{
 								left: .5rem;
 								right: .5rem;
 							}
+
 						}
+						.sub-menu{
+							a{
+								pointer-events: all;
+							}
+						}
+
+
 					}
 				}
 			}
@@ -1616,13 +1682,20 @@ body{
 
 		}
 		#menu{
-			font-size: 4em;
+			/*font-size: 4em;
+			ul,li{
+					font-size: inherit;
+					.sub-menu{
+						font-size: 2rem;
+					}
+				}
 			a{
 				text-decoration: none;
 				display: table;
 				line-height: 1;
 				margin-top: .5em;
 				position: relative;
+
 				&:after{
 					content: "";
 					position: absolute;
@@ -1630,7 +1703,72 @@ body{
 					left: 0;
 					right: 0;
 					height: 0.05em;
-					background: #1e1e1e;
+					//background: #1e1e1e;
+				}
+			}*/
+			ul.menu{
+				border-bottom: 2px solid;
+				.menu-item{
+					display: block;
+					width: 100%;
+					a{
+						border-top: 2px solid;
+						font-size: 2rem;
+						display: block;
+						padding: .5em 0;
+						text-decoration: none;
+						&:after{
+							display: none;
+						}
+					}
+					&.menu-item-has-children{
+						position: relative;
+						&:after{
+							display: block;
+							content: "";
+							width: .5em;
+							height: .5em;
+							position: absolute;
+							top: 1.7em;
+							right: 1rem;
+							@include transform(rotate(45deg));
+							border: 2px solid;
+							border-left: none;
+							border-top: none;
+							@include animar();
+						}
+						&:before{
+							position: absolute;
+							content: "";
+							top: 0;
+							bottom: 0;
+							right: 0;
+							width: 2em;
+
+						}
+					}
+					.sub-menu{
+						max-height: 0;
+						overflow: hidden;
+						@include animar();
+						margin: 0;
+						padding: 0;
+						a{
+							font-size: 1.2rem;
+							border-top: 1px solid;
+						}
+					}
+					&:hover{
+						&.menu-item-has-children{
+							&:after{
+								@include transform(rotate(-135deg));	
+							}
+							
+						}
+						.sub-menu{
+							max-height: 20rem;
+						}
+					}
 				}
 			}
 		}
