@@ -503,6 +503,7 @@ body{
 			ul{
 				display: block;
 				font-size: inherit;
+				
 				@media all and (min-width: 768px){
 					font-size: 0;	
 				}
@@ -520,6 +521,9 @@ body{
 					.sub-menu{
 						max-height: 0;
 						overflow: hidden;
+						border: 1px solid $c_verde;
+						@include opacity(0);
+						//border-top: none;
 						@include animar();
 						a{
 							pointer-events: all;	
@@ -528,7 +532,7 @@ body{
 						@media all and (min-width: 769px){
 							position: absolute;
 							top: 100%;
-							left: 0;
+							right: 0;
 							min-width: 12em;
 							white-space: nowrap;
 						}
@@ -536,11 +540,15 @@ body{
 						li{
 							display: block;
 							background: $c_gris;
+							text-align: right;
+
 							&.current-menu-item{
 								background: $c_negro;
 								color: $c_blanco;
+								pointer-events: none;
 							}
 							a{
+								padding: 1rem;
 								&:after{
 									display: none;
 								}
@@ -555,11 +563,15 @@ body{
 					&:hover{
 						.sub-menu{
 							max-height: 20rem;
+							@include opacity(1);
+						}
+						>a{
+							background: $c_verde;
 						}
 					}
 					a{
 						display: block;
-						padding: 1.5rem .5rem;
+						padding: 1.5rem .75rem;
 						color: inherit;
 						text-decoration: none;
 						position: relative;
@@ -578,7 +590,7 @@ body{
 			
 						}
 						&:hover{
-							background: $c_verde;
+							
 							&:after{
 								left: .5rem;
 								right: .5rem;
