@@ -11,17 +11,20 @@ if(get_field('color_fondo')){
 <section class="block text-block <?php echo $bg; ?>">
 	<div class="container">
 		<article class="text-container">
-			<h3 class="tit-two"><?php echo get_field('titulo');?></h3>
+			<h3 class="tit-two" data-aos="fade-up"><?php echo get_field('titulo');?></h3>
 			<div>
 				<?php echo get_field('texto');?>
 			</div>
 			
 		</article>
 		<section class="links">
-			<?php foreach(get_field('links') as $link):
+			<?php 
+			$ct = 1;
+			foreach(get_field('links') as $link):
 				//var_dump($link);
+				$ct++;
 				?>
-			<article class="link">
+			<article class="link" data-aos="fade-up" data-aos-delay="<?php echo ($ct%2)*100;?>">
 				<div class="foto">
 					<a href="<?php echo $link['url'];?>" target="_blank"><?php echo wp_get_attachment_image($link['foto']['ID'],'medium'); ?></a>
 				</div>

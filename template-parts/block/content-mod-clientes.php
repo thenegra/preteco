@@ -7,7 +7,7 @@
 
 	<div class="container">
 		<article class="text-container">
-			<h3 class="tit-two no-marg"><?php 
+			<h3 class="tit-two no-marg" data-aos="fade-up"><?php 
 			if(get_field('titulo')) { 
 				echo get_field('titulo'); 
 			} else{ 
@@ -19,7 +19,7 @@
 </section>
 <section class="block clientes-block bg-blanco">
 	<div class="container">
-		<ul class="clientes">
+		<ul class="clientes" data-aos="fade-up">
 			<div class="content-slick">
 				<?php $ct = 0; foreach(get_field('clientes') as $cliente):
 				
