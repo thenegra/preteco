@@ -1,5 +1,7 @@
 
-<?php get_header(); ?>
+<?php get_header(); 
+
+?>
 <main id="content" role="main" class="page-main">
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -8,20 +10,14 @@
 		<h2 class="tit-one"><?php the_title(); ?></h2>
 		</div>
 	</header>
+	<?php if(!sg_get_first_block_id()):?>
 	<div class="space"></div>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="container">
-<?php the_content(); ?>
-
-
-<?php endwhile; endif; ?>
-
-</div>
-
-
-</article>
-
+	<?php endif;?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="container">
+		<?php the_content(); ?>
+		<?php endwhile; endif; ?>
+		</div>
+	</article>
 </main>
-
 <?php get_footer(); ?>
-

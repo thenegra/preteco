@@ -206,7 +206,7 @@ body{
 	p,ul{
 		color: inherit;
 		font-size: 1.3rem;
-		&:not(.slick-slider){
+		&:not(.slick-slider,.clientes,.slick-dots){
 			max-width: 60rem;
 		}
 		&.small{
@@ -700,7 +700,7 @@ body{
 			@include flex-direction(row);
 			@include justify-content(stretch);
 			@include align-items(stretch);
-			min-height: 80vh;
+			min-height: 90vh;
 		}
 		.col-uno,.col-dos{
 			width: 50%;
@@ -730,6 +730,7 @@ body{
 			.slider-main{
 				height: 100%;
 				width: 50vw;
+				margin-top: 0;
 				padding-bottom: 0;
 				@include flexbox();
 				@include align-items(stretch);
@@ -1797,7 +1798,8 @@ body{
 .page-header{
 	display: block;
 	background: $c_verde;
-	padding: 12rem 0 4rem;
+	padding: 3rem 0;
+	min-height: 24rem;
 	.tit-one{
 		margin-bottom: 0;
 	}
@@ -1813,6 +1815,31 @@ body{
 		//display: none;
 		z-index: 99999999;
 	}
+}
+.block-editor{
+	.container{
+		width: 90%;
+	}
+	.main-hero .col-dos .inner-half,.main-hero .col-dos .slider-main{
+		width: 100%;
+		padding: 0;
+
+	}
+	.main-hero .col-dos .slider-main .slider-unit{
+		width: 100%;
+		article{
+			padding: 0;
+		}
+		h4{
+			width: 100%;
+			font-size: 1.2rem;
+			
+		}
+		.img-container{
+			max-width: 100%;
+		}
+	}
+
 }
 
 

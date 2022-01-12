@@ -258,6 +258,15 @@ function my_acf_init() {
 			'icon'				=> 'grid-view',
 			'keywords'			=> array( 'linea, separador' ),
 		));
+		acf_register_block(array(
+			'name'				=> 'mod-busquedas',
+			'title'				=> __('Preteco: Búsquedas'),
+			'description'		=> __('Bloque visual búsquedas laborales'),
+			'render_callback'	=> 'render_block_acf',
+			'category'			=> 'custom',
+			'icon'				=> 'grid-view',
+			'keywords'			=> array( 'linea, separador' ),
+		));
 	}
 }
 
@@ -313,6 +322,24 @@ function firstBlock() {
         $blocks = parse_blocks($post->post_content);
         $first_block_attrs = $blocks[0]['attrs'];
 
+        if(array_key_exists('id', $first_block_attrs)) {
+            return $first_block_attrs['id'];
+        }
+    }
+}
+
+
+
+/**
+ * Get ID of the first ACF block on the page
+ */
+function sg_get_first_block_id() {
+    $post = get_post(); 
+
+    if(has_blocks($post->post_content)) {
+        $blocks = parse_blocks($post->post_content);
+        $first_block_attrs = $blocks[0]['attrs'];
+        //var_dump($first_block_attrs);
         if(array_key_exists('id', $first_block_attrs)) {
             return $first_block_attrs['id'];
         }

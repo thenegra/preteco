@@ -128,7 +128,8 @@
 	function closeCotizacion(){
 		$('#toggle-relevamiento').fadeOut();	
 	}
-	function getCV(){
+	function getCV(str){
+		$('.cv-area').val(str);
 		$('#toggle-cv').fadeIn();
 	}
 	function closeCV(){
