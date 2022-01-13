@@ -400,18 +400,21 @@ body{
 }
 .bg-gris{
 	background: $c_gris;
+	color: $c_negro;
 	.bg-secundario{
 		background: $c_verde;
 	}
 }
 .bg-blanco{
 	background: $c_blanco;
+	color: $c_negro;
 	.bg-secundario{
 		background: $c_gris;
 	}
 }
 .bg-verde{
 	background: $c_verde;
+	color: $c_negro;
 	.bg-secundario{
 		background: $c_gris;
 		color: $c_negro;
@@ -938,6 +941,7 @@ body{
 				/* fin de lo nuevo */
 				ul{
 					display: block;
+					font-size: 1em;
 					li{
 						display: block;
 						padding-left: .7em;
@@ -1816,7 +1820,10 @@ body{
 		.container{
 			position: relative;
 			@media all and (max-width: 768px){
-				padding-right: 3rem;
+				h2{
+					padding-right: 3rem;	
+				}
+				
 			}
 			.icono-area{
 				position: absolute;
@@ -1872,7 +1879,12 @@ body{
 					li.servicio{
 						padding: 0!important;
 						margin:0!important;
-						
+						&.open{
+							.servicio-header{
+								background: $c_gris;
+								color: $c_negro;
+							}
+						}
 						.servicio-header{
 							padding: 1rem;
 							border-bottom: 1px solid;
@@ -1883,9 +1895,10 @@ body{
 							&.fixed{
 								pointer-events:none;
 							}
+
 							&:hover{
 								color: $c_negro;
-								background: $c_blanco;
+								background: $c_gris;
 
 							}
 							.marcador{
@@ -1987,6 +2000,61 @@ body{
 
 }
 
+/* Caso de exito */
+.caso-main{
+	.page-header{
+		.descripcion{
+			@media all and (min-width: 769px){
+				@include flexbox();
+				//@include justify-content(space-between);
+				@include align-items(stretch);
+				.texto{
+					max-width: 63%;
+					margin-right: 3%;
+					margin-top: 3em;
+				}
+				.logo{
+					position: relative;
+					
+					@include flex-direction(column);
+					
+					.ano{
+						position: absolute;
+						left: 0;
+						bottom: 100%;
+					}
+				}
+			}
+			.logo{
+				@include flexbox();
+				@include justify-content(space-between);
+
+				img{
+					display: block;
+					max-width: 9em;
+				}
+				@media all and (max-width: 768px){
+					margin-top: 2em;
+					@include align-items(flex-end);
+					img{
+						max-width: 6em;
+						@include order(-1);
+					}
+				}
+			}
+		}
+	}
+	.contenidos-caso{
+		@media all and (min-width: 769px){
+			@include flexbox();
+			@include align-items(flex-start);
+			.contenido-caso{
+				width: 30%;
+				margin-right: 3%;
+			}
+		}
+	}
+}
 
 
 #adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu{

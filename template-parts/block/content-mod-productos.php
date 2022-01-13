@@ -59,7 +59,7 @@ if(get_field('color_fondo')){
 						<?php echo $producto['descripcion'];?>
 						<nav class="nav-productos" data-aos="fade-right" data-aos-duration="<?php echo (350+200*($ct%2));  ?>">
 			<?php if($producto['link']):?>
-				<a href="<?php echo $producto['link']; ?>" class="boton">Ver más</a>
+				<a href="<?php if($producto['link'][0] == '/'){ echo get_site_url(); }?><?php echo $producto['link']; ?>" class="boton">Ver más</a>
 
 			<?php endif;?>
 			<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')" class="boton">Quiero saber más</a>

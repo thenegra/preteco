@@ -42,6 +42,24 @@
 			</div>
 		</div>
 	</article>
+	
+<div></div>
+<section class="block text-block bg-gris">
+	<div class="container">
+		<article class="text-container">
+			<h3 class="tit-two" data-aos="fade-up">Relevamiento gratuito</h3>
+			<div data-aos="fade-up" data-aos-delay="400">
+				<p>Solicite un Relevamiento gratuito de su infraestructura y descubra como evolucionar su negocio con Preteco.</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="600" >
+			
+			<a class="boton" onclick="getCotizacion('<?php echo get_the_title();?>')">Ver más</a>
+			
+			</div>
+		</article>
+	</div>
+</section>
+
 	<?php endwhile; endif; ?>
 </main>
 <script type="text/javascript">
@@ -62,4 +80,6 @@
 		
 	});
 </script>
+
+
 <?php get_footer(); ?>
