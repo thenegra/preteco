@@ -30,6 +30,9 @@ a{
 		text-decoration: none;
 	}
 }
+em{
+	font-style: italic;
+}
 #container{
 
 	ul:not(.slick-slider):not(.slider-main):not(.slick-dots){
@@ -1875,6 +1878,16 @@ body{
 							border-bottom: 1px solid;
 							padding-right: 4rem;
 							position: relative;
+							@include animar();
+							cursor: pointer;
+							&.fixed{
+								pointer-events:none;
+							}
+							&:hover{
+								color: $c_negro;
+								background: $c_blanco;
+
+							}
 							.marcador{
 								position: absolute;
 								top: 50%;

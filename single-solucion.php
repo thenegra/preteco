@@ -25,11 +25,13 @@
 					<?php foreach(get_field('servicios') as $servicio):?>
 						
 					<li class="servicio">
-						<header class="servicio-header bg-secundario">
+						<header class="servicio-header bg-secundario <?php if(!$servicio['descripcion']){ echo 'fixed'; }?>">
 							<h3 class="tit-four"><?php echo $servicio['nombre']; ?></h3>
+							<?php if($servicio['descripcion']):?>
 							<span class="marcador">
 								<span class="flecha"></span>
 							</span>
+							<?php endif;?>
 						</header>
 						<div class="content">
 							<?php echo $servicio['descripcion'];?>
