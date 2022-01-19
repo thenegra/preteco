@@ -603,7 +603,7 @@ body{
 							}
 						}
 					}
-					&.current-page-ancestor{
+					&.current-page-ancestor,&.current_page_ancestor{
 						background: $c_verde;
 						//color: $c_blanco;
 					}
@@ -839,18 +839,23 @@ body{
 		
 		@include flex-wrap(wrap);
 		.solution-item{
-			width: 46%;
+			width: 49%;
 			position: relative;
 			box-sizing:border-box;
 			margin:0;
-			margin-right: 4%;
-			margin-bottom: 3rem;
+			margin-right: 2%;
+			margin-bottom: 2%;
 			overflow: hidden;
 			@include flexbox();
 				@include flex-direction(column);
 				@include justify-content(stretch);
 				@include align-items(stretch);
-			@media all and (max-width: 480px){
+				@media all and (min-width: 769px){
+					&:nth-child(2n){
+						margin-right: 0;
+					}
+				}
+			@media all and (max-width: 768px){
 				width: 100%;
 				margin: 0;
 				margin-bottom: 2rem;
