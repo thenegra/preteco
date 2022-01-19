@@ -1,13 +1,25 @@
-<?php get_header(); ?>
-<main id="content" role="main">
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<div class="entry-content" itemprop="mainContentOfPage">
-<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</div>
-</article>
+
+<?php get_header(); 
+
+?>
+<main id="content" role="main" class="page-main">
+
+
+	<header class="page-header">
+		<div class="container">
+		<h2 class="tit-one">Página no encontrada</h2>
+		</div>
+	</header>
+	
+	<div class="space"></div>
+	
+	<article id="post-404">
+		<div class="container">
+			<h3 class="tit-three">El contenido que buscás no existe, o el link es incorrecto.</h3>
+			<p>Probá buscando en nuestra página de inicio haciendo <a href="<?php echo home_url('/inicio')?>">click acá</a></p>
+		
+		</div>
+	</article>
+	<div class="space"></div><div class="space"></div><div class="space"></div>
 </main>
 <?php get_footer(); ?>

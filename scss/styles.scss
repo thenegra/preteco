@@ -961,6 +961,14 @@ body{
 				}
 				.nav-productos{
 					@include flexbox();
+					&.space{
+						height: auto;
+						@include align-items(flex-end);
+						@include justify-content(space-between);
+						a{
+							margin-top: 0;
+						}
+					}
 					a{
 						margin-right: 1em;
 					}
@@ -986,6 +994,7 @@ body{
 					//max-width: 90%;
 					//height: 80%;
 					@include flexbox();
+					width: 100%;
 					@include flex-direction(column);
 					@include justify-content(space-between);
 					@include align-items(flex-start);
@@ -998,6 +1007,7 @@ body{
 						@include flexbox();
 						@include justify-content(space-between);
 						@include align-items(center);
+						width: 100%;
 						padding: 1rem 0;
 						border-bottom: 1px solid;
 						h3{
@@ -1010,9 +1020,13 @@ body{
 					}
 					.card-contents,.card-header{
 						padding: 1rem 2rem;
+						width: 100%;
 					}
 					.card-contents{
 						padding-bottom: 2.5rem;
+						&.caso{
+							padding-bottom: 1rem;
+						}
 					}
 				}
 				h3{
@@ -1838,10 +1852,10 @@ body{
 				@include flexbox();
 				@include justify-content(space-between);
 				.tit-one{
-					width: 45%;
+					width: 35%;
 				}
 				.descripcion{
-					width: 50%;
+					width: 60%;
 					p{
 						&:first-child{
 							margin-top: 0;
@@ -1860,7 +1874,7 @@ body{
 				@include flexbox();
 				@include justify-content(space-between);
 				.icono-area{
-					width: 45%;
+					width: 35%;
 					@include flexbox();
 					@include flex-direction(column);
 					@include justify-content(flex-start);
@@ -1869,7 +1883,7 @@ body{
 					}
 				}
 				.servicios{
-					width: 50%;
+					width: 60%;
 				}
 			}
 			.servicios{

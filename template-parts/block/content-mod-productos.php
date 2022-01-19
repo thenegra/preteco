@@ -35,9 +35,9 @@ if(get_field('color_fondo')){
 		 	foreach(get_field('productos') as $producto):
 		 		$ct++;
 			?>
-			<article class="solution-item " data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
+			<article class="solution-item " data-aos="fade-up" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 				<header class="imagen">
-					<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')">
+					<a <?php if($producto['link']):?>href="<?php if($producto['link'][0] == '/'){ echo get_site_url(); }?><?php echo $producto['link']; ?>"<?php else: ?>onclick="getCotizacion('<?php echo $producto['nombre']; ?>')"<?php endif;?>>
 						<!--img src="<?php echo get_template_directory_uri(); ?>/img/placeholder.jpg"-->
 						<?php
 						
@@ -52,7 +52,7 @@ if(get_field('color_fondo')){
 				<div class="contents" data-aos="fade-right" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 					<div>
 						<header class="card-header">
-				<a onclick="getCotizacion('<?php echo $producto['nombre']; ?>')"><h3 class="tit-four"><?php remove_filter('acf_the_content', 'wpautop'); echo $producto['nombre'];add_filter('acf_the_content', 'wpautop');?></h3></a>
+				<a <?php if($producto['link']):?>href="<?php if($producto['link'][0] == '/'){ echo get_site_url(); }?><?php echo $producto['link']; ?>"<?php else: ?>onclick="getCotizacion('<?php echo $producto['nombre']; ?>')"<?php endif;?>><h3 class="tit-four"><?php remove_filter('acf_the_content', 'wpautop'); echo $producto['nombre'];add_filter('acf_the_content', 'wpautop');?></h3></a>
 				<span class="icono ptc-<?php echo $producto['icono']?>" data-aos="fade-right" data-aos-duration="<?php echo (100+200*($ct%2));  ?>"></span>
 						</header>
 						<div class="card-contents">
