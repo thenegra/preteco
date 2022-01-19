@@ -1897,7 +1897,12 @@ body{
 							.servicio-header{
 								background: $c_gris;
 								color: $c_negro;
+								border-bottom: none;
 							}
+						}
+						.content{
+							border: 1px solid $c_gris;
+
 						}
 						.servicio-header{
 							padding: 1rem;
