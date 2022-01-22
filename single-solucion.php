@@ -15,11 +15,13 @@
 	<?php if(!sg_get_first_block_id()):?>
 	<div class="space"></div>
 	<?php endif;?>
+	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('contenidos'); ?>>
 		<div class="container">
 			<div class="icono-area only-desk" >
 				<span class="icono ptc-<?php echo get_field('icono'); ?>" data-aos="fade-up" ></span>
 			</div>
+			<?php if(get_field('servicios')):?>
 			<div class="servicios">
 				<ul class="servicios-list" data-aos="fade-up">
 					<?php foreach(get_field('servicios') as $servicio):?>
@@ -40,10 +42,14 @@
 					<?php endforeach;?>
 				</ul>
 			</div>
+			<?php endif;?>
 		</div>
 	</article>
 	
 <div></div>
+<?php
+		
+		 if(get_field('casos')): ?>
 <section  class="block text-block bg-gris" >
 	<?php //blockBump($block); ?>
 	<div class="container">
@@ -57,17 +63,16 @@
 		
 	</div>
 </section>
-<section class="block solution-block bg-gris">
+
+<section class="block solution-block casos bg-gris">
 
 	<div class="container">
-		<?php
-		
-		 if(get_field('casos')):
+			<?php
 		 	$ct=1;
 		 	foreach(get_field('casos') as $caso):
 		 		$ct++;
 			?>
-			<article class="solution-item " data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
+			<article class="solution-item caso" data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
 				
 			<div class="card-top bg-secundario">
 				<div class="contents" data-aos="fade-right" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
@@ -78,8 +83,17 @@
 						</header-->
 						<div class="card-contents caso">
 							<div style="height: .5em;"></div>
-							<a href="<?php echo get_the_permalink($caso['caso'])?>"><h3 class="tit-four"><?php echo get_the_title($caso['caso']); ?></h3></a>
-							<h4 class="tit-five"><?php echo get_field('marca',$caso['caso']); ?></h4>
+							<a class="caso-header" href="<?php echo get_the_permalink($caso['caso'])?>">
+								<div>
+									<h3 class="tit-four"><?php echo get_the_title($caso['caso']); ?></h3>
+									<h4 class="tit-five"><?php echo get_field('marca',$caso['caso']); ?></h4>
+								</div>
+								
+								<span class="logo">
+									<?php  echo wp_get_attachment_image(get_field('logo',$caso['caso'])['ID'],'full',false,array('title'=>get_field('marca'))); ?>
+								</span>
+							</a>
+							
 						<?php echo $producto['descripcion'];?>
 						<nav class="nav-productos space" data-aos="fade-right" data-aos-duration="<?php echo (350+200*($ct%2));  ?>">
 							<span><?php echo get_field('ano',$caso['caso']);?></span>
@@ -93,12 +107,76 @@
 			</div>
 
 		</article>
-		<?php endforeach;endif;?>
+		<?php endforeach;?>
 		
 
 	</div>
 	<div class="space"></div>
 </section>
+<?php endif; ?>
+<?php
+		
+		 if(get_field('links')): ?>
+		 	<div class="linea-gradient"></div>
+<section  class="block text-block bg-gris" >
+	<?php //blockBump($block); ?>
+	<div class="container">
+		<article class="text-container">
+			<h3 class="tit-two no-marg" data-aos="fade-right">Más información</h3>
+			<div data-aos="fade-right" data-aos-duration="300">
+				<p>Te compartimos algunos enlaces que pueden interesarte.</p>
+			</div>
+			
+		</article>
+		
+	</div>
+</section>
+
+<section class="block solution-block casos bg-gris">
+
+	<div class="container">
+			<?php
+		 	$ct=1;
+		 	foreach(get_field('links') as $caso):
+		 		$ct++;
+			?>
+			<article class="solution-item caso" data-aos="fade" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
+				
+			<div class="card-top bg-secundario">
+				<div class="contents" data-aos="fade-right" data-aos-duration="<?php echo (200+200*($ct%2));  ?>">
+					
+						<!--header class="card-header">
+							
+				<span class="icono ptc-<?php echo $producto['icono']?>" data-aos="fade-right" data-aos-duration="<?php echo (100+200*($ct%2));  ?>"></span>
+						</header-->
+						<div class="card-contents caso">
+							<div style="height: .5em;"></div>
+							<a class="caso-header" href="<?php echo get_the_permalink($caso['caso'])?>">
+								<div>
+									<h3 class="tit-four"><?php echo $caso['nombre']; ?></h3>
+								</div>
+							</a>
+							
+						<?php echo $producto['descripcion'];?>
+						<nav class="nav-productos space" data-aos="fade-right" data-aos-duration="<?php echo (350+200*($ct%2));  ?>">
+							
+							<a href="<?php echo $caso['link']; ?>" class="boton" target="_blank">Ver más</a>
+			</nav>
+						
+			</div>
+			
+				</div>
+				
+			</div>
+
+		</article>
+		<?php endforeach;?>
+		
+
+	</div>
+	<div class="space"></div>
+</section>
+<?php endif; ?>
 <section class="block text-block bg-verde">
 	<div class="container">
 		<article class="text-container">

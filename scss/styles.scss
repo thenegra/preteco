@@ -598,22 +598,47 @@ body{
 						&:hover{
 							
 							&:after{
-								left: .5rem;
+								left: auto;
 								right: .5rem;
+							}
+						}
+					}
+					&.menu-item-has-children a,&.wpml-ls-current-language a{
+						padding-right: 2em;
+						position: relative;
+						&:after{
+							content: "";
+							border: 1px solid;
+							width: 6px;
+							height: 6px;
+							border-top: none;
+							border-left: none;
+							position: absolute;
+							right: .5em;
+							left: auto;
+							top: 48%;
+							@include transform(translate(-50%,-50%) rotate(45deg));
+							@include animar();
+
+						}
+						&:hover{
+							&:after{
+								@include transform(translate(-50%,25%) rotate(-135deg));
 							}
 						}
 					}
 					&.current-page-ancestor,&.current_page_ancestor{
 						background: $c_verde;
 						//color: $c_blanco;
+						
 					}
 					&.current-menu-item{
 						background: $c_verde;
 						a{
 							pointer-events: none;
 							&:after{
-								left: .5rem;
-								right: .5rem;
+								/*left: .5rem;
+								right: .5rem;*/
 							}
 
 						}
@@ -864,6 +889,20 @@ body{
 					margin-bottom: 0rem;
 				}
 			}
+			&.caso{
+				.caso-header{
+					@include flexbox();
+					@include justify-content(space-between);
+					margin-bottom: 2em;
+					.logo{
+						display: block;
+						img{
+							display: block;
+							width: 6em;
+						}
+					}
+				}
+			}
 			>.contents{	
 				display: none;
 				padding: 5% 0;
@@ -976,6 +1015,9 @@ body{
 					}
 					a{
 						margin-right: 1em;
+						&:last-child{
+							margin-right: 0;
+						}
 					}
 				}
 				@media all and (max-width: 480px){
@@ -1861,6 +1903,19 @@ body{
 				}
 				.descripcion{
 					width: 60%;
+					h2,h3,h4{
+						margin-top: 1em;
+					}
+					h2{
+						font-size: 1.7em;
+					}
+					h3{
+						font-size: 1.5em;
+
+					}
+					h4{
+						font-size: 1.3em;
+					}
 					p{
 						&:first-child{
 							margin-top: 0;

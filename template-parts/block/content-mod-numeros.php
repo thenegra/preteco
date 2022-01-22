@@ -39,8 +39,11 @@
 			<div class="inner-content">
 				<div class="inner-half right">
 					<h4 class="tit-three" data-aos="fade-left" data-aos-duration="500">Quienes somos</h4>
-					<p data-aos="fade-left" data-aos-duration="600">Somos una consultora integral de tecnología que desde hace más de dos décadas trabaja junto a los clientes para optimizar sus procesos de negocios, innovar o modernizar su infraestructura, a través de la implementación de las últimas soluciones digitales en el mercado.</p>
-					<p data-aos="fade-left" data-aos-duration="700">Nuestra trayectoria y experiencia en aportar una solución integral, de acuerdo a las necesidades de cada empresa y organización, nos convierte en un aliado estratégico para sus negocios.</p>
+					<div data-aos="fade-left" data-aos-duration="600">
+						<?php echo get_field('quienes_somos');?>	
+					</div>
+					
+					
 				</div>
 				<div class="linea-gradient small inv"></div>
 			</div>

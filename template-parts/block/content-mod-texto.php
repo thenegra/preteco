@@ -11,7 +11,7 @@ if(get_field('color_fondo')){
 <section class="block text-block <?php echo $bg; ?>">
 	<div class="container">
 		<article class="text-container">
-			<h3 class="tit-two" data-aos="fade-up"><?php echo get_field('titulo');?></h3>
+			<?php if(strlen(get_field('titulo'))>0):?><h3 class="tit-two" data-aos="fade-up"><?php echo get_field('titulo');?></h3><?php endif; ?>
 			<div data-aos="fade-up" data-aos-delay="400">
 				<?php echo get_field('texto');?>
 			</div>
