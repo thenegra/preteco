@@ -25,9 +25,18 @@ html{
 }
 a{
 	color: inherit;
+}
+p a{
+	color: inherit;
+	color: $c_verde;
 	text-decoration: underline;
 	&:hover{
 		text-decoration: none;
+	}
+}
+.bg-blanco{
+	a{
+		color: inherit;
 	}
 }
 em{
@@ -77,6 +86,7 @@ em{
 		}
 	}
 }
+
 body{ 
 	&:not(.wp-admin){
 		form{
@@ -181,11 +191,12 @@ body{
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 16px;
 	line-height: 1.2;
-
-	img{
-		display: block;
-		max-width: 100%;
-		height: auto;
+	&:not(.wp-admin){
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
 	}
 	h1,h2,h3,h4,h5,h6{
 		margin-bottom: 1em;
@@ -524,6 +535,30 @@ body{
 					font-size: inherit;
 					display: inline-block;
 					position: relative;
+					&.wpml-ls-current-language{
+						a>span{
+							span{
+								display: none;
+							}
+						}
+						.sub-menu{
+							min-width: 10rem;
+							a>span{
+								@include flexbox();
+								@include justify-content(flex-end);
+								span{
+									display: block;
+									@include order(-1);
+									margin-right: .5em;
+								}
+							}
+						}
+					}
+					img{
+							display: inline-block;
+							vertical-align: middle;
+							height: 1rem;
+						}
 					.sub-menu{
 						max-height: 0;
 						overflow: hidden;
@@ -1798,6 +1833,7 @@ body{
 						display: block;
 						padding: .5em 0;
 						text-decoration: none;
+
 						&:after{
 							display: none;
 						}
