@@ -1923,9 +1923,13 @@ body{
 				}
 				
 			}
+			.solucion-header-inner{
+				@include flexbox();
+				@include justify-content(space-between);
+			}
 			.icono-area{
-				position: absolute;
-				top: 4rem;
+				
+				
 				right: 0;
 
 				.icono{
@@ -1937,8 +1941,17 @@ body{
 			@media all and (min-width: 769px){
 				@include flexbox();
 				@include justify-content(space-between);
-				.tit-one{
+				.solucion-header-inner{
 					width: 35%;
+					position: relative;
+					display: block;
+					.icono{
+						position: absolute;
+						top: 100%;
+						left: 0;
+						margin-top: 4rem;
+						font-size: 4rem;
+					}
 				}
 				.descripcion{
 					width: 60%;

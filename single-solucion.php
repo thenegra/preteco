@@ -3,23 +3,26 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<header class="solucion-header">
 		<div class="container">
-		<h2 class="tit-one" data-aos="fade-up"><?php the_title(); ?></h2>
-		<div class="icono-area only-mob"  data-aos="fade-up">
-				<span class="icono ptc-<?php echo get_field('icono'); ?>" data-aos="fade-up" ></span>
+			<div class="solucion-header-inner">
+				<h2 class="tit-one" data-aos="fade-up"><?php the_title(); ?></h2>
+				<div class="icono-area "  data-aos="fade-up">
+					<span class="icono ptc-<?php echo get_field('icono'); ?>" data-aos="fade-up" ></span>
+				</div>
 			</div>
-		<div class="descripcion"  data-aos="fade-up" data-aos-delay="50">
-			<?php echo get_field('descripcion');?>
-		</div>
+		
+			<div class="descripcion"  data-aos="fade-up" data-aos-delay="50">
+				<?php echo get_field('descripcion');?>
+			</div>
 		</div>
 	</header>
 	<?php if(!sg_get_first_block_id()):?>
-	<div class="space"></div>
+	<!--div class="space"></div-->
 	<?php endif;?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('contenidos'); ?>>
 		<div class="container">
 			<div class="icono-area only-desk" >
-				<span class="icono ptc-<?php echo get_field('icono'); ?>" data-aos="fade-up" ></span>
+				<!--span class="icono ptc-<?php echo get_field('icono'); ?>" data-aos="fade-up" ></span-->
 			</div>
 			<?php if(get_field('servicios')):?>
 			<div class="servicios">
