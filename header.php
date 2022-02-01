@@ -97,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php if(is_page('inicio') || is_front_page()):?>
 
 <script type="text/javascript">
-	
+	/*
 	var sT;
 	$(document).ready(function(){
 		$(document).scroll(checkScroll);
@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		} else{
 			$('#header').removeClass('sticky');
 		}
-	}
+	} */
 </script>
 <?php endif; ?>
 <script type="text/javascript">
