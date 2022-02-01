@@ -45,7 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 ?>
 <div id="wrapper" class="hfeed">
-<header id="header" class="<?php if(!is_page('inicio') && !is_front_page()){ echo 'sticky'; }?>" role="banner">
+<header id="header" class="sticky <?php if(!is_page('inicio') && !is_front_page()){ echo 'sticky'; }?>" role="banner">
 	<div class="container">
 	<div id="branding" >
 		<div id="site-title" itemprop="publisher">
