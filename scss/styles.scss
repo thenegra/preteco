@@ -203,6 +203,7 @@ body{
 		strong{
 			display: inline-block;
 			position: relative;
+			font-weight: inherit;
 			&:after{
 				position: absolute;
 				content: "";
